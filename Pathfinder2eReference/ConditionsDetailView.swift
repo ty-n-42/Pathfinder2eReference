@@ -11,19 +11,23 @@ struct ConditionsDetailView: View {
     let condition: Condition
     
     var body: some View {
-        VStack(alignment: .center) {
-            ScrollView {
-                Text(.init(condition.description))
-                    .padding(.top, 30.0)
-                    .padding([.leading, .trailing, .bottom], 20.0)
+        VStack {
+            Name(name: condition.name.isEmpty ? "!! DATA ERROR !!" : condition.name.capitalized, imageName: "person")
+                .frame(maxWidth: .infinity, alignment: .leading)
+            Affects(affects: condition.affects)
+                .frame(maxWidth: .infinity, alignment: .leading)
+
+            ScrollView([.vertical], showsIndicators: true) {
+                TitleAndText(title: "Description", text: condition.description)
             }
         }
-        .frame(minWidth: 200.0, minHeight: 400.0) // note: needs to manually keep these values the same as what is specified for DetailView in ContentView
+        .padding()
+        .frame(minWidth: 300.0, idealWidth: 400.0)
     }
 }
 
 struct ConditionsDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ConditionsDetailView(condition: Condition(name: "Test condition", description: "Test condition description", affects: [Affect.player]))
+        ConditionsDetailView(condition: Condition(name: "Name", description: "Descriprion", affects: [Affect.player]))
     }
 }

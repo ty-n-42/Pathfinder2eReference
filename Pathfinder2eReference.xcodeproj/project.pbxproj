@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4830CC1B27E697D100AE763F /* DataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4830CC1A27E697D100AE763F /* DataTypes.swift */; };
+		4830CC1D27E6A6A600AE763F /* ActionsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4830CC1C27E6A6A600AE763F /* ActionsDetailView.swift */; };
+		4830CC1F27E6F42400AE763F /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4830CC1E27E6F42400AE763F /* Styles.swift */; };
+		4839BFE427EC2629006A93E4 /* Skills.json in Resources */ = {isa = PBXBuildFile; fileRef = 4839BFE327EC2629006A93E4 /* Skills.json */; };
 		483D990B27E556FB00016E36 /* AllItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483D990A27E556FB00016E36 /* AllItemsView.swift */; };
 		483D990D27E5764500016E36 /* ConditionsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483D990C27E5764500016E36 /* ConditionsDetailView.swift */; };
+		483D990F27E586AF00016E36 /* Actions.json in Resources */ = {isa = PBXBuildFile; fileRef = 483D990E27E586AF00016E36 /* Actions.json */; };
 		48982FB527E06D9B001CF0E6 /* ConditionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48982FB427E06D9B001CF0E6 /* ConditionsView.swift */; };
 		48A2C14F27E30D760026CBF7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A2C14E27E30D760026CBF7 /* DetailView.swift */; };
 		48A2C15127E30DDB0026CBF7 /* ActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A2C15027E30DDB0026CBF7 /* ActionsView.swift */; };
@@ -22,8 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4830CC1A27E697D100AE763F /* DataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypes.swift; sourceTree = "<group>"; };
+		4830CC1C27E6A6A600AE763F /* ActionsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsDetailView.swift; sourceTree = "<group>"; };
+		4830CC1E27E6F42400AE763F /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		4839BFE327EC2629006A93E4 /* Skills.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Skills.json; sourceTree = "<group>"; };
 		483D990A27E556FB00016E36 /* AllItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllItemsView.swift; sourceTree = "<group>"; };
 		483D990C27E5764500016E36 /* ConditionsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionsDetailView.swift; sourceTree = "<group>"; };
+		483D990E27E586AF00016E36 /* Actions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Actions.json; sourceTree = "<group>"; };
 		48982FB427E06D9B001CF0E6 /* ConditionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionsView.swift; sourceTree = "<group>"; };
 		48A2C14E27E30D760026CBF7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		48A2C15027E30DDB0026CBF7 /* ActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsView.swift; sourceTree = "<group>"; };
@@ -70,6 +80,8 @@
 			children = (
 				48E099DF27E02A6700FC341F /* data files */,
 				48E099D027E012CD00FC341F /* Pathfinder2eReferenceApp.swift */,
+				4830CC1E27E6F42400AE763F /* Styles.swift */,
+				4830CC1A27E697D100AE763F /* DataTypes.swift */,
 				48E099D227E012CD00FC341F /* ContentView.swift */,
 				48A2C15427E312A80026CBF7 /* SubContentView.swift */,
 				48A2C15027E30DDB0026CBF7 /* ActionsView.swift */,
@@ -78,6 +90,7 @@
 				483D990A27E556FB00016E36 /* AllItemsView.swift */,
 				48A2C14E27E30D760026CBF7 /* DetailView.swift */,
 				483D990C27E5764500016E36 /* ConditionsDetailView.swift */,
+				4830CC1C27E6A6A600AE763F /* ActionsDetailView.swift */,
 				48E099D427E012CE00FC341F /* Assets.xcassets */,
 				48E099D927E012CE00FC341F /* Pathfinder2eReference.entitlements */,
 				48E099D627E012CE00FC341F /* Preview Content */,
@@ -97,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				48E099E027E02AF100FC341F /* Conditions.json */,
+				483D990E27E586AF00016E36 /* Actions.json */,
+				4839BFE327EC2629006A93E4 /* Skills.json */,
 			);
 			path = "data files";
 			sourceTree = "<group>";
@@ -129,7 +144,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					48E099CC27E012CD00FC341F = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -159,7 +174,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4839BFE427EC2629006A93E4 /* Skills.json in Resources */,
 				48E099D827E012CE00FC341F /* Preview Assets.xcassets in Resources */,
+				483D990F27E586AF00016E36 /* Actions.json in Resources */,
 				48E099E127E02AF100FC341F /* Conditions.json in Resources */,
 				48E099D527E012CE00FC341F /* Assets.xcassets in Resources */,
 			);
@@ -175,10 +192,13 @@
 				48A2C15327E30E0B0026CBF7 /* SkillsView.swift in Sources */,
 				48A2C15127E30DDB0026CBF7 /* ActionsView.swift in Sources */,
 				48E099D327E012CD00FC341F /* ContentView.swift in Sources */,
+				4830CC1F27E6F42400AE763F /* Styles.swift in Sources */,
 				483D990D27E5764500016E36 /* ConditionsDetailView.swift in Sources */,
 				483D990B27E556FB00016E36 /* AllItemsView.swift in Sources */,
+				4830CC1D27E6A6A600AE763F /* ActionsDetailView.swift in Sources */,
 				48A2C14F27E30D760026CBF7 /* DetailView.swift in Sources */,
 				48A2C15527E312A80026CBF7 /* SubContentView.swift in Sources */,
+				4830CC1B27E697D100AE763F /* DataTypes.swift in Sources */,
 				48E099D127E012CD00FC341F /* Pathfinder2eReferenceApp.swift in Sources */,
 				48982FB527E06D9B001CF0E6 /* ConditionsView.swift in Sources */,
 			);
@@ -308,6 +328,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Pathfinder2eReference/Pathfinder2eReference.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -335,6 +356,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Pathfinder2eReference/Pathfinder2eReference.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;

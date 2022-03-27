@@ -11,7 +11,6 @@ enum Category: String, CaseIterable {
     case actions
     case conditions
     case skills
-    case all
 }
 
 /**
@@ -30,10 +29,10 @@ struct ContentView: View {
             .frame(minWidth: 100.0, idealWidth: 200.0, minHeight: 300.0, idealHeight: 500.0)
 
             SubContentView()
-                .frame(minWidth:100.0, idealWidth: 200.0)
+                .frame(minWidth:200.0, idealWidth: 300.0)
 
             DetailView(category: nil, item: nil)
-                .frame(minWidth: 200.0, idealWidth: 400.0)
+                .frame(minWidth: 300.0, idealWidth: 400.0)
         }
         .navigationTitle("Pathfinder 2e Reference")
         .toolbar {

@@ -1,0 +1,1561 @@
+{
+    "description": "While your character’s ability scores represent their raw talent and potential, skills represent their training and experience at performing certain tasks. Each skill is keyed to one of your character’s ability scores and used for an array of related actions. Your character’s expertise in a skill comes from several sources, including their background and class.",
+    "skills": [
+        {
+            "name": "balance",
+            "skillGroup": "acrobatics",
+            "keyAbility": "dexterity",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "ancounter",
+            "traits": [
+                "move"
+            ],
+            "requirement": "You are in a square that contains a narrow surface, uneven ground, or another similar feature.",
+            "description": "You move across a narrow surface or uneven ground, attempting an Acrobatics check against its Balance DC. You are flat-footed while on a narrow surface or uneven ground.",
+            "criticalSuccess": "You move up to your Speed.",
+            "success": "You move up to your Speed, treating it as difficult terrain (every 5 feet costs 10 feet of movement).",
+            "failure": "You must remain stationary to keep your balance (wasting the action) or you fall. If you fall, your turn ends.",
+            "criticalFailure": "You fall and your turn ends.",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "tumble through",
+            "skillGroup": "acrobatics",
+            "keyAbility": "dexterity",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "move"
+            ],
+            "requirement": "",
+            "description": "You Stride up to your Speed. During this movement, you can try to move through the space of one enemy. Attempt an Acrobatics check against the enemy’s Reflex DC as soon as you try to enter its space. You can Tumble Through using Climb, Fly, Swim, or another action instead of Stride in the appropriate environment.",
+            "criticalSuccess": "",
+            "success": "You move through the enemy’s space, treating the squares in its space as difficult terrain (every 5 feet costs 10 feet of movement). If you don’t have enough Speed to move all the way through its space, you get the same effect as a failure.",
+            "failure": "Your movement ends, and you trigger reactions as if you had moved out of the square you started in.",
+            "criticalFailure": "",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "maneuver in flight",
+            "skillGroup": "acrobatics",
+            "keyAbility": "dexterity",
+            "competence": "trained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "move"
+            ],
+            "requirement": "You have a fly Speed.",
+            "description": "You try a difficult maneuver while flying. Attempt an Acrobatics check. The GM determines what maneuvers are possible, but they rarely allow you to move farther than your fly Speed.",
+            "criticalSuccess": "",
+            "success": "You succeed at the maneuver.",
+            "failure": "Your maneuver fails. The GM chooses if you simply can’t move or if some other detrimental effect happens. The outcome should be appropriate for the maneuver you attempted (for instance, being blown off course if you were trying to fly against a strong wind).",
+            "criticalFailure": "As failure, but the consequence is more dire.",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "squeeze",
+            "skillGroup": "acrobatics",
+            "keyAbility": "dexterity",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "exploration",
+            "traits": [
+                "move"
+            ],
+            "requirement": "",
+            "description": "You contort yourself to squeeze through a space so small you can barely fit through. This action is for exceptionally small spaces; many tight spaces are difficult terrain (page 475) that you can move through more quickly and without a check.",
+            "criticalSuccess": "You squeeze through the tight space in 1 minute per 10 feet of squeezing.",
+            "success": "You squeeze through in 1 minute per 5 feet.",
+            "failure": "",
+            "criticalFailure": "You become stuck in the tight space. While you’re stuck, you can spend 1 minute attempting another Acrobatics check at the same DC. Any result on that check other than a critical failure causes you to become unstuck.",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "recall knowledge (arcana)",
+            "skillGroup": "arcana",
+            "keyAbility": "intelligence",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "concentrate",
+                "secret"
+            ],
+            "requirement": "",
+            "description": "Recall Knowledge about arcane theories; magic traditions; creatures of arcane significance (like dragons and beasts); and the Elemental, Astral, and Shadow Planes. \n\tYou attempt a skill check to try to remember a bit of knowledge regarding a topic related to that skill. The GM determines the DCs for such checks and which skills apply.",
+            "criticalSuccess": "You recall the knowledge accurately and gain additional information or context.",
+            "success": "You recall the knowledge accurately or gain a useful clue about your current situation.",
+            "failure": "",
+            "criticalFailure": "You recall incorrect information or gain an erroneous or misleading clue.",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "decipher writing (arcana)",
+            "skillGroup": "arcana",
+            "keyAbility": "intelligence",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "exploration",
+            "traits": [
+                "concentrate",
+                "secret"
+            ],
+            "requirement": "You must be trained in Arcana.",
+            "description": "Decipher Writing about arcane theory. \n\tYou attempt to decipher complicated writing or literature on an obscure topic. This usually takes 1 minute per page of text, but might take longer (typically an hour per page for decrypting ciphers or the like). The text must be in a language you can read, though the GM might allow you to attempt to decipher text written in an unfamiliar language using Society instead. \n\tThe DC is determined by the GM based on the state or complexity of the document. The GM might have you roll one check for a short text or a check for each section of a larger text.",
+            "criticalSuccess": "You understand the true meaning of the text.",
+            "success": "You understand the true meaning of the text. If it was a coded document, you know the general meaning but might not have a word-for-word translation.",
+            "failure": "You can’t understand the text and take a –2 circumstance penalty to further checks to decipher it.",
+            "criticalFailure": "You believe you understand the text on that page, but you have in fact misconstrued its message.",
+            "affects": [
+                "item"
+            ]
+        },
+        {
+            "name": "identify magic (arcana)",
+            "skillGroup": "arcana",
+            "keyAbility": "intelligence",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "exploration",
+            "traits": [
+                "concentrate",
+                "secret"
+            ],
+            "requirement": "",
+            "description": "Identify Magic, particularly arcane magic. \n\tOnce you discover that an item, location, or ongoing effect is magical, you can spend 10 minutes to try to identify the particulars of its magic. If your attempt is interrupted, you must start over. The GM sets the DC for your check. Cursed or esoteric subjects usually have higher DCs or might even be impossible to identify using this activity alone. Heightening a spell doesn’t increase the DC to identify it.",
+            "criticalSuccess": "You learn all the attributes of the magic, including its name (for an effect), what it does, any means of activating it (for an item or location), and whether it is cursed.",
+            "success": "For an item or location, you get a sense of what it does and learn any means of activating it. For an ongoing effect (such as a spell with a duration), you learn the effect’s name and what it does. You can’t try again in hopes of getting a critical success.",
+            "failure": "You fail to identify the magic and can’t try again for 1 day.",
+            "criticalFailure": "You misidentify the magic as something else of the GM’s choice.",
+            "affects": [
+                "item",
+                "environment"
+            ]
+        },
+        {
+            "name": "learn a spell (arcana)",
+            "skillGroup": "arcana",
+            "keyAbility": "intelligence",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "exploration",
+            "traits": [
+                "concentrate"
+            ],
+            "requirement": "You have a spellcasting class feature, and the spell you want to learn is on your magical tradition’s spell list.",
+            "description": "Learn a Spell from the arcane tradition. \n\tYou can gain access to a new spell of your tradition from someone who knows that spell or from magical writing like a spellbook or scroll. If you can cast spells of multiple traditions, you can Learn a Spell of any of those traditions, but you must use the corresponding skill to do so. For example, if you were a cleric with the bard multiclass archetype, you couldn’t use Religion to add an occult spell to your bardic spell repertoire.\n\tTo learn the spell, you must do the following:\n\t-Spend 1 hour per level of the spell, during which you must remain in conversation with a person who knows the spell or have the magical writing in your possession. \n\t-Have materials with the Price indicated in Table 4–3. \n\t-Attempt a skill check for the skill corresponding to your tradition (DC determined by the GM, often close to the DC on Table 4–3). Uncommon or rare spells have higher DCs; full guidelines for the GM appear on page 503. \n\tIf you have a spellbook, Learning a Spell lets you add the spell to your spellbook; if you prepare spells from a list, it’s 4 added to your list; if you have a spell repertoire, you can select it when you add or swap spells.",
+            "criticalSuccess": "You expend half the materials and learn the spell.",
+            "success": "You expend the materials and learn the spell.",
+            "failure": "You fail to learn the spell but can try again after you gain a level. The materials aren’t expended.",
+            "criticalFailure": "As failure, plus you expend half the materials.",
+            "affects": [
+                "person"
+            ]
+        },
+        {
+            "name": "borrow an arcane spell",
+            "skillGroup": "arcana",
+            "keyAbility": "intelligence",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "exploration",
+            "traits": [
+                "concentrate"
+            ],
+            "requirement": "",
+            "description": "If you’re an arcane spellcaster who prepares from a spellbook, you can attempt to prepare a spell from someone else’s spellbook. The GM sets the DC for the check based on the spell’s level and rarity; it’s typically a bit easier than Learning the Spell.",
+            "criticalSuccess": "",
+            "success": "You prepare the borrowed spell as part of your normal spell preparation.",
+            "failure": "You fail to prepare the spell, but the spell slot remains available for you to prepare a different spell. You can’t try to prepare this spell until the next time you prepare spells.",
+            "criticalFailure": "",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "climb",
+            "skillGroup": "athletics",
+            "keyAbility": "strength",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [],
+            "requirement": "You have both hands free.",
+            "description": "You move up, down, or across an incline. Unless it’s particularly easy, you must attempt an Athletics check. The GM determines the DC based on the nature of the incline and environmental circumstances. You’re flat-footed unless you have a climb Speed.",
+            "criticalSuccess": "You move up, across, or safely down the incline for 5 feet plus 5 feet per 20 feet of your land Speed (a total of 10 feet for most PCs).",
+            "success": "You move up, across, or safely down the incline for 5 feet per 20 feet of your land Speed (a total of 5 feet for most PCs, minimum 5 feet if your Speed is below 20 feet).",
+            "failure": "",
+            "criticalFailure": "You fall. If you began the climb on stable ground, you fall and land prone.",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "force open",
+            "skillGroup": "athletics",
+            "keyAbility": "strength",
+            "competence": "untrained",
+            "type": "encounter",
+            "duration": 1,
+            "mode": "action",
+            "traits": [
+                "attack"
+            ],
+            "requirement": "",
+            "description": "Using your body, a lever, or some other tool, you attempt to forcefully open a door, window, container or heavy gate. With a high enough result, you can even smash through walls. Without a crowbar, prying something open takes a –2 item penalty to the Athletics check to Force Open.",
+            "criticalSuccess": "You open the door, window, container, or gate and can avoid damaging it in the process.",
+            "success": "You break the door, window, container, or gate open, and the door, window, container, or gate gains the broken condition. If it’s especially sturdy, the GM might have it take damage but not be broken.",
+            "failure": "",
+            "criticalFailure": "Your attempt jams the door, window, container, or gate shut, imposing a –2 circumstance penalty on future attempts to Force it Open.",
+            "affects": [
+                "item",
+                "environment"
+            ]
+        },
+        {
+            "name": "grapple",
+            "skillGroup": "athletics",
+            "keyAbility": "strength",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "attack"
+            ],
+            "requirement": "You have at least one free hand. Your target cannot be more than one size larger than you.",
+            "description": "You attempt to grab an opponent with your free hand. Attempt an Athletics check against their Fortitude DC. You can also Grapple to keep your hold on a creature you already grabbed.",
+            "criticalSuccess": "Your opponent is restrained until the end of your next turn unless you move or your opponent Escapes (page 470).",
+            "success": "Your opponent is grabbed until the end of your next turn unless you move or your opponent Escapes.",
+            "failure": "You fail to grab your opponent. If you already had the opponent grabbed or restrained using a Grapple, those conditions on that creature end.",
+            "criticalFailure": "If you already had the opponent grabbed or restrained, it breaks free. Your target can either grab you, as if it succeeded at using the Grapple action against you, or force you to fall and land prone.",
+            "affects": [
+                "others"
+            ]
+        },
+        {
+            "name": "high jump",
+            "skillGroup": "athletics",
+            "keyAbility": "strength",
+            "competence": "untrined",
+            "type": "activity",
+            "duration": 2,
+            "mode": "encounter",
+            "traits": [],
+            "requirement": "",
+            "description": "You Stride, then make a vertical Leap and attempt a DC 30 Athletics check to increase the height of your jump. If you didn’t Stride at least 10 feet, you automatically fail your check. This DC might be increased or decreased due to the situation, as determined by the GM. \n\tLeap\n\tThe Leap basic action is used for High Jump and Long Jump. Leap lets you take a careful, short jump. You can Leap up to 10 feet horizontally if your Speed is at least 15 feet, or up to 15 feet horizontally if your Speed is at least 30 feet. You land in the space where your Leap ends (meaning you can typically clear a 5-foot gap if your Speed is between 15 feet and 30 feet, or a 10-foot gap if your Speed is 30 feet or more). If you make a vertical Leap, you can move up to 3 feet vertically and 5 feet horizontally onto an elevated surface.",
+            "criticalSuccess": "Increase the maximum vertical distance to 8 feet, or increase the maximum vertical distance to 5 feet and maximum horizontal distance to 10 feet.",
+            "success": "Increase the maximum vertical distance to 5 feet.",
+            "failure": "You Leap normally.",
+            "criticalFailure": "You don’t Leap at all, and instead you fall prone in your space.",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "long jump",
+            "skillGroup": "athletics",
+            "keyAbility": "strength",
+            "competence": "untrained",
+            "type": "activity",
+            "duration": 2,
+            "mode": "encounter",
+            "traits": [],
+            "requirement": "",
+            "description": "You Stride, then make a horizontal Leap and attempt an Athletics check to increase the length of your jump. The DC of the Athletics check is equal to the total distance in feet you’re attempting to move during your Leap (so you’d need to succeed at a DC 20 check to Leap 20 feet). You can’t Leap farther than your Speed.\n\tIf you didn’t Stride at least 10 feet, or if you attempt to jump in a different direction than your Stride, you automatically fail your check. This DC might be increased or decreased due to the situation, as determined by the GM. \n\tLeap\n\tThe Leap basic action is used for High Jump and Long Jump. Leap lets you take a careful, short jump. You can Leap up to 10 feet horizontally if your Speed is at least 15 feet, or up to 15 feet horizontally if your Speed is at least 30 feet. You land in the space where your Leap ends (meaning you can typically clear a 5-foot gap if your Speed is between 15 feet and 30 feet, or a 10-foot gap if your Speed is 30 feet or more). If you make a vertical Leap, you can move up to 3 feet vertically and 5 feet horizontally onto an elevated surface.",
+            "criticalSuccess": "",
+            "success": "Increase the maximum horizontal distance you Leap to the desired distance.",
+            "failure": "You Leap normally.",
+            "criticalFailure": "You Leap normally, but then fall and land prone.",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "shove",
+            "skillGroup": "athletics",
+            "keyAbility": "strength",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "attack"
+            ],
+            "requirement": "You have at least one hand free. The target can’t be more than one size larger than you.",
+            "description": "You push an opponent away from you. Attempt an Athletics check against your opponent’s Fortitude DC. \n\tForced Movement \n\tThe Shove action can force a creature to move. When an effect forces you to move, or if you start falling, the distance you move is defined by the effect that moved you, not by your Speed. Because you’re not acting to move, this doesn’t trigger reactions triggered by movement.",
+            "criticalSuccess": "You push your opponent up to 10 feet away from you. You can Stride after it, but you must move the same distance and in the same direction.",
+            "success": "You push your opponent back 5 feet. You can Stride after it, but you must move the same distance and in the same direction.",
+            "failure": "",
+            "criticalFailure": "You lose your balance, fall, and land prone.",
+            "affects": [
+                "others"
+            ]
+        },
+        {
+            "name": "swim",
+            "skillGroup": "athletics",
+            "keyAbility": "strength",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "move"
+            ],
+            "requirement": "",
+            "description": "You propel yourself through water. In most calm water, you succeed at the action without needing to attempt a check. If you must breathe air and you’re submerged in water, you must hold your breath each round. If you fail to hold your breath, you begin to drown (as described on page 478). If the water you are swimming in is turbulent or otherwise dangerous, you might have to attempt an Athletics check to Swim. \n\tIf you end your turn in water and haven’t succeeded at a Swim action that turn, you sink 10 feet or get moved by the current, as determined by the GM. However, if your last action on your turn was to enter the water, you don’t sink or move with the current that turn.",
+            "criticalSuccess": "You move through the water 10 feet, plus 5 feet per 20 feet of your land Speed (a total of 15 feet for most PCs).",
+            "success": "You move through the water 5 feet, plus 5 feet per 20 feet of your land Speed (a total of 10 feet for most PCs).",
+            "failure": "",
+            "criticalFailure": "You make no progress, and if you’re holding your breath, you lose 1 round of air.",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "trip",
+            "skillGroup": "athletics",
+            "keyAbility": "strength",
+            "competence": "untrained",
+            "type": "encounter",
+            "duration": 1,
+            "mode": "action",
+            "traits": [
+                "attack"
+            ],
+            "requirement": "You have at least one hand free. Your target can’t be more than one size larger than you.",
+            "description": "You try to knock an opponent to the ground. Attempt an Athletics check against the target’s Reflex DC.",
+            "criticalSuccess": "The target falls and lands prone and takes 1d6 bludgeoning damage.",
+            "success": "The target falls and lands prone.",
+            "failure": "",
+            "criticalFailure": "You lose your balance and fall and land prone.",
+            "affects": [
+                "others"
+            ]
+        },
+        {
+            "name": "disarm",
+            "skillGroup": "athletics",
+            "keyAbility": "strength",
+            "competence": "trained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "attack"
+            ],
+            "requirement": "You have at least one hand free. The target can’t be more than one size larger than you.",
+            "description": "You try to knock something out of an opponent’s grasp. Attempt an Athletics check against the opponent’s Reflex DC.",
+            "criticalSuccess": "You knock the item out of the opponent’s grasp. It falls to the ground in the opponent’s space.",
+            "success": "You weaken your opponent’s grasp on the item. Until the start of that creature’s turn, attempts to Disarm the opponent of that item gain a +2 circumstance bonus, and the target takes a –2 circumstance penalty to attacks with the item or other checks requiring a firm grasp on the item.",
+            "failure": "",
+            "criticalFailure": "You lose your balance and become flat-footed until the start of your next turn.",
+            "affects": [
+                "others"
+            ]
+        },
+        {
+            "name": "recall knowledge (crafting)",
+            "skillGroup": "crafting",
+            "keyAbility": "intelligence",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "concentrate",
+                "secret"
+            ],
+            "requirement": "",
+            "description": "Recall Knowledge about alchemical reactions, the value of items, engineering, unusual materials, and alchemical or mechanical creatures. The GM determines which creatures this applies to, but it usually includes constructs.",
+            "criticalSuccess": "You recall the knowledge accurately and gain additional information or context.",
+            "success": "You recall the knowledge accurately or gain a useful clue about your current situation.",
+            "failure": "",
+            "criticalFailure": "You recall incorrect information or gain an erroneous or misleading clue.",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "repair",
+            "skillGroup": "crafting",
+            "keyAbility": "intelligence",
+            "competence": "untrained",
+            "type": "action",
+            "duration": -1,
+            "mode": "exploration",
+            "traits": [
+                "manipulate"
+            ],
+            "requirement": "You have a repair kit (page 291).",
+            "description": "You spend 10 minutes attempting to fix a damaged item, placing the item on a stable surface and using the repair kit with both hands. The GM sets the DC, but it’s usually about the same DC to Repair a given item as it is to Craft it in the first place. You can’t Repair a destroyed item.",
+            "criticalSuccess": "You restore 10 Hit Points to the item, plus an additional 10 Hit Points per proficiency rank you have in Crafting (a total of 20 HP if you’re trained, 30 HP if you’re an expert, 40 HP if you’re a master, or 50 HP if you’re legendary).",
+            "success": "You restore 5 Hit Points to the item, plus an additional 5 per proficiency rank you have in Crafting (for a total of 10 HP if you are trained, 15 HP if you’re an expert, 20 HP if you’re a master, or 25 HP if you’re legendary).",
+            "failure": "",
+            "criticalFailure": "You deal 2d6 damage to the item. Apply the item’s Hardness to this damage.",
+            "affects": [
+                "item"
+            ]
+        },
+        {
+            "name": "earn income (crafting)",
+            "skillGroup": "crafting",
+            "keyAbility": "intelligence",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "downtime",
+            "traits": [],
+            "requirement": "",
+            "description": "Earn Income by crafting goods for the market. \n\tYou use one of your skills to make money during downtime. The GM assigns a task level representing the most lucrative job available. You can search for lower-level tasks, with the GM determining whether you find any. Sometimes you can attempt to find better work than the initial offerings, though this takes time and requires using the Diplomacy skill to Gather Information, doing some research, or socializing. \n\tWhen you take on a job, the GM secretly sets the DC of your skill check. After your first day of work, you roll to determine your earnings. You gain an amount of income based on your result, the task’s level, and your proficiency rank (as listed on Table 4–2: Income Earned). \n\tYou can continue working at the task on subsequent days without needing to roll again. For each day you spend after the first, you earn the same amount as the first day, up until the task’s completion. The GM determines how long you can work at the task. Most tasks last a week or two, though some can take months or even years.",
+            "criticalSuccess": "You do outstanding work. Gain the amount of currency listed for the task level + 1 and your proficiency rank.",
+            "success": "You do competent work. Gain the amount of currency listed for the task level and your proficiency rank.",
+            "failure": "You do shoddy work and get paid the bare minimum for your time. Gain the amount of currency listed in the failure column for the task level. The GM will likely reduce how long you can continue at the task.",
+            "criticalFailure": "You earn nothing for your work and are fired immediately. You can’t continue at the task. Your reputation suffers, potentially making it difficult for you to find rewarding jobs in that community in the future.",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "craft",
+            "skillGroup": "crafting",
+            "keyAbility": "intelligence",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "downtime",
+            "traits": [
+                "manipulate"
+            ],
+            "requirement": "",
+            "description": "You can make an item from raw materials. You need the Alchemical Crafting skill feat to create alchemical items, the Magical Crafting skill feat to create magic items, and the Snare Crafting feat to create snares. \n\tTo Craft an item, you must meet the following requirements: \n\t-The item is your level or lower. An item that doesn’t list a level is level 0. If the item is 9th level or higher, you must be a master in Crafting, and if it’s 16th or higher, you must be legendary. \n\t-You have the formula for the item; see Getting Formulas below for more information. \n\t-You have an appropriate set of tools and, in many cases, a workshop. For example, you need access to a smithy to forge a metal shield. \n\t-You must supply raw materials worth at least half the item’s Price. You always expend at least that amount of raw materials when you Craft successfully. If you’re in a settlement, you can usually spend currency to get the amount of raw materials you need, except in the case of rarer precious materials. \n\tYou must spend 4 days at work, at which point you attempt a Crafting check. The GM determines the DC to Craft the item based on its level, rarity, and other circumstances. \n\tIf your attempt to create the item is successful, you expend the raw materials you supplied. You can pay the remaining portion of the item’s Price in materials to complete the item immediately, or you can spend additional downtime days working on it. For each additional day you spend, reduce the value of the materials you need to expend to complete the item. This amount is determined using Table 4–2: Income Earned (page 236), based on your proficiency rank in Crafting and using your own level instead of a task level. After any of these downtime days, you can complete the item by spending the remaining portion of its Price in materials. If the downtime days you spend are interrupted, you can return to finish the item later, continuing where you left off. An example of Crafting appears in the sidebar. \n\tConsumables and Ammunition \n\tYou can Craft items with the consumable trait in batches, making up to four of the same item at once with a single check. This requires you to include the raw materials for all the items in the batch at the start, and you must complete the batch all at once. You also Craft non-magical ammunition in batches, using the quantity listed in Table 6–8: Ranged Weapons (typically 10).\n\tGetting Formulas \n\tYou can gain access to the formulas for all common items in Chapter 6: Equipment by purchasing a basic crafter’s book (page 287). See the rules on page 293 for information on how to acquire other formulas.",
+            "criticalSuccess": "Your attempt is successful. Each additional day spent Crafting reduces the materials needed to complete the item by an amount based on your level + 1 and your proficiency rank in Crafting.",
+            "success": "Your attempt is successful. Each additional day spent Crafting reduces the materials needed to complete the item by an amount based on your level and your proficiency rank.",
+            "failure": "You fail to complete the item. You can salvage the raw materials you supplied for their full value. If you want to try again, you must start over.",
+            "criticalFailure": "You fail to complete the item. You ruin 10% of the raw materials you supplied, but you can salvage the rest. If you want to try again, you must start over.",
+            "affects": [
+                "item"
+            ]
+        },
+        {
+            "name": "identify alchemy",
+            "skillGroup": "crafting",
+            "keyAbility": "intelligence",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "exploration",
+            "traits": [
+                "concentrate",
+                "secret"
+            ],
+            "requirement": "You have alchemist’s tools (page 287).",
+            "description": "You can identify the nature of an alchemical item with 10 minutes of testing using alchemist’s tools. If your attempt is interrupted in any way, you must start over.",
+            "criticalSuccess": "",
+            "success": "You identify the item and the means of activating it.",
+            "failure": "You fail to identify the item but can try again.",
+            "criticalFailure": "You misidentify the item as another item of the GM’s choice.",
+            "affects": [
+                "item"
+            ]
+        },
+        {
+            "name": "create a diversion",
+            "skillGroup": "deception",
+            "keyAbility": "charisma",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "mental"
+            ],
+            "requirement": "",
+            "description": "With a gesture, a trick, or some distracting words, you can create a diversion that draws creatures’ attention elsewhere. If you use a gesture or trick, this action gains the manipulate trait. If you use distracting words, it gains the auditory and linguistic traits. \n\tAttempt a single Deception check and compare it to the Perception DCs of the creatures whose attention you’re trying to divert. Whether or not you succeed, creatures you attempt to divert gain a +4 circumstance bonus to their Perception DCs against your attempts to Create a Diversion for 1 minute.",
+            "criticalSuccess": "",
+            "success": "You become hidden to each creature whose Perception DC is less than or equal to your result. (The hidden condition allows you to Sneak away, as described on page 252.) This lasts until the end of your turn or until you do anything except Step or use the Hide or the Sneak action of the Stealth skill (pages 251 and 252). If you Strike a creature, the creature remains flat-footed against that attack, and you then become observed. If you do anything else, you become observed just before you act unless the GM determines otherwise.",
+            "failure": "You don’t divert the attention of any creatures whose Perception DC exceeds your result, and those creatures are aware you were trying to trick them.",
+            "criticalFailure": "",
+            "affects": [
+                "others"
+            ]
+        },
+        {
+            "name": "impersonate",
+            "skillGroup": "deception",
+            "keyAbility": "charisma",
+            "competence": "untrained",
+            "type": "action",
+            "duration": -1,
+            "mode": "exploration",
+            "traits": [
+                "concentrate",
+                "manipulate",
+                "secret"
+            ],
+            "requirement": "",
+            "description": "You create a disguise to pass yourself off as someone or something you are not. Assembling a convincing disguise takes 10 minutes and requires a disguise kit (found on page 290), but a simpler, quicker disguise might do the job if you’re not trying to imitate a specific individual, at the GM’s discretion. \n\tIn most cases, creatures have a chance to detect your deception only if they use the Seek action to attempt Perception checks against your Deception DC. If you attempt to directly interact with someone while disguised, the GM rolls a secret Deception check for you against that creature’s Perception DC instead. If you’re disguised as a specific individual, the GM might give creatures you interact with a circumstance bonus based on how well they know the person you’re imitating, or the GM might roll a secret Deception check even if you aren’t directly interacting with others.",
+            "criticalSuccess": "",
+            "success": "You trick the creature into thinking you’re the person you’re disguised as. You might have to attempt a new check if your behavior changes.",
+            "failure": "The creature can tell you’re not who you claim to be.",
+            "criticalFailure": "The creature can tell you’re not who you claim to be, and it recognizes you if it would know you without a disguise.",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "lie",
+            "skillGroup": "deception",
+            "keyAbility": "charisma",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "auditory",
+                "concentrate",
+                "linguistic",
+                "mental",
+                "secret"
+            ],
+            "requirement": "",
+            "description": "You try to fool someone with an untruth. Doing so takes at least 1 round, or longer if the lie is elaborate. You roll a single Deception check and compare it against the Perception DC of every creature you are trying to fool. The GM might give them a circumstance bonus based on the situation and the nature of the lie you are trying to tell. Elaborate or highly unbelievable lies are much harder to get a creature to believe than simpler and more believable lies, and some lies are so big that it’s impossible to get anyone to believe them. \n\tAt the GM’s discretion, if a creature initially believes your lie, it might attempt a Perception check later to Sense Motive against your Deception DC to realize it’s a lie. This usually happens if the creature discovers enough evidence to counter your statements.",
+            "criticalSuccess": "",
+            "success": "The target believes your lie.",
+            "failure": "The target doesn’t believe your lie and gains a +4 circumstance bonus against your attempts to Lie for the duration of your conversation. The target is also more likely to be suspicious of you in the future.",
+            "criticalFailure": "",
+            "affects": [
+                "others"
+            ]
+        },
+        {
+            "name": "feint",
+            "skillGroup": "deception",
+            "keyAbility": "charisma",
+            "competence": "trained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "mental"
+            ],
+            "requirement": "You are within melee reach of the opponent you attempt to Feint.",
+            "description": "With a misleading flourish, you leave an opponent unprepared for your real attack. Attempt a Deception check against that opponent’s Perception DC.",
+            "criticalSuccess": "You throw your enemy’s defenses against you entirely off. The target is flat-footed against melee attacks that you attempt against it until the end of your next turn.",
+            "success": "Your foe is fooled, but only momentarily. The target is flat-footed against the next melee attack that you attempt against it before the end of your current turn.",
+            "failure": "",
+            "criticalFailure": "Your feint backfires. You are flat-footed against melee attacks the target attempts against you until the end of your next turn.",
+            "affects": [
+                "others"
+            ]
+        },
+        {
+            "name": "gather information",
+            "skillGroup": "diplomancy",
+            "keyAbility": "charisma",
+            "competence": "untrained",
+            "type": "action",
+            "duration": -1,
+            "mode": "exploration",
+            "traits": [
+                "secret"
+            ],
+            "requirement": "",
+            "description": "You canvass local markets, taverns, and gathering places in an attempt to learn about a specific individual or topic. The GM determines the DC of the check and the amount of time it takes (typically 2 hours, but sometimes more), along with any benefit you might be able to gain by spending coin on bribes, drinks, or gifts.",
+            "criticalSuccess": "",
+            "success": "You collect information about the individual or topic. The GM determines the specifics.",
+            "failure": "",
+            "criticalFailure": "You collect incorrect information about the individual or topic.",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "make an impression",
+            "skillGroup": "diplomacy",
+            "keyAbility": "charisma",
+            "competence": "untrained",
+            "type": "action",
+            "duration": -1,
+            "mode": "exploration",
+            "traits": [
+                "auditory",
+                "concentrate",
+                "linguistic",
+                "mental"
+            ],
+            "requirement": "",
+            "description": "With at least 1 minute of conversation, during which you engage in charismatic overtures, flattery, and other acts of goodwill, you seek to make a good impression on someone to make them temporarily agreeable. At the end of the conversation, attempt a Diplomacy check against the Will DC of one target, modified by any circumstances the GM sees fit. Good impressions (or bad impressions, on a critical failure) last for only the current social interaction unless the GM decides otherwise. \n\tChanging Attitudes \n\t Your influence on NPCs is measured with a set of attitudes that reflect how they view your character. These are only a brief summary of a creature’s disposition. The GM will supply additional nuance based on the history and beliefs of the characters you’re interacting with, and their attitudes can change in accordance with the story. The attitudes are detailed in the Conditions Appendix and are summarized here. \n\t- Helpful: Willing to help you and responds favorably to your requests. \n\t- Friendly: Has a good attitude toward you, but won’t necessarily stick their neck out to help you. \n\t- Indifferent: Doesn’t care about you either way. (Most NPCs start out indifferent.) \n\t- Unfriendly: Dislikes you and doesn’t want to help you. \n\t- Hostile: Actively works against you—and might attack you just because of their dislike. \n\tNo one can ever change the attitude of a player character with these skills. You can roleplay interactions with player characters, and even use Diplomacy results if the player wants a mechanical sense of how convincing or charming a character is, but players make the ultimate decisions about how their characters respond.",
+            "criticalSuccess": "The target’s attitude toward you improves by two steps.",
+            "success": "The target’s attitude toward you improves by one step.",
+            "failure": "",
+            "criticalFailure": "The target’s attitude toward you decreases by one step.",
+            "affects": [
+                "others"
+            ]
+        },
+        {
+            "name": "request",
+            "skillGroup": "diplomacy",
+            "keyAbility": "charisma",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "auditory",
+                "concentrate",
+                "linguistic",
+                "mental"
+            ],
+            "requirement": "",
+            "description": "You can make a request of a creature that’s friendly or helpful to you. You must couch the request in terms that the target would accept given their current attitude toward you. The GM sets the DC based on the difficulty of the request. Some requests are unsavory or impossible, and even a helpful NPC would never agree to them.",
+            "criticalSuccess": "The target agrees to your request without qualifications.",
+            "success": "The target agrees to your request, but they might demand added provisions or alterations to the request.",
+            "failure": "The target refuses the request, though they might propose an alternative that is less extreme.",
+            "criticalFailure": "Not only does the target refuse the request, but their attitude toward you decreases by one step due to the temerity of the request.",
+            "affects": [
+                "others"
+            ]
+        },
+        {
+            "name": "coerce",
+            "skillGroup": "intimidation",
+            "keyAbility": "charisma",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "exploration",
+            "traits": [
+                "auditory",
+                "concentrate",
+                "emotion",
+                "linguistic",
+                "mental"
+            ],
+            "requirement": "",
+            "description": "With threats either veiled or overt, you attempt to bully a creature into doing what you want. You must spend at least 1 minute of conversation with a creature you can see and that can either see or sense you. At the end of the conversation, attempt an Intimidation check against the target’s Will DC, modified by any circumstances the GM determines. The attitudes referenced in the effects below are summarized in the Changing Attitudes sidebar on page 246 and described in full in the Conditions Appendix, starting on page 618.",
+            "criticalSuccess": "The target gives you the information you seek or agrees to follow your directives so long as they aren’t likely to harm the target in any way. The target continues to comply for an amount of time determined by the GM but not exceeding 1 day, at which point the target becomes unfriendly (if they weren’t already unfriendly or hostile). However, the target is too scared of you to retaliate—at least in the short term.",
+            "success": "As critical success, but once the target becomes unfriendly, they might decide to act against you—for example, by reporting you to the authorities or assisting your enemies.",
+            "failure": "The target doesn’t do what you say, and if they were not already unfriendly or hostile, they become unfriendly.",
+            "criticalFailure": "The target refuses to comply, becomes hostile if they weren’t already, and can’t be Coerced by you for at least 1 week.",
+            "affects": [
+                "others"
+            ]
+        },
+        {
+            "name": "demoralize",
+            "skillGroup": "intimidation",
+            "keyAbility": "charisma",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "auditory",
+                "concentrate",
+                "emotion",
+                "mental"
+            ],
+            "requirement": "",
+            "description": "With a sudden shout, a well-timed taunt, or a cutting put- down, you can shake an enemy’s resolve. Choose a creature within 30 feet of you who you’re aware of. Attempt an Intimidation check against that target’s Will DC. If the target does not understand the language you are speaking, you’re not speaking a language, or they can’t hear you, you take a –4 circumstance penalty to the check. Regardless of your result, the target is temporarily immune to your attempts to Demoralize it for 10 minutes.",
+            "criticalSuccess": "The target becomes frightened 2.",
+            "success": "The target becomes frightened 1.",
+            "failure": "",
+            "criticalFailure": "",
+            "affects": [
+                "others"
+            ]
+        },
+        {
+            "name": "recall knowledge (lore)",
+            "skillGroup": "lore",
+            "keyAbility": "intelligence",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "concentrate",
+                "secret"
+            ],
+            "requirement": "",
+            "description": "Recall Knowledge about the subject of your Lore skill’s subcategory. \n\tYou attempt a skill check to try to remember a bit of knowledge regarding a topic related to that skill. The GM determines the DCs for such checks and which skills apply. \n\tThe following skills can be used to Recall Knowledge, getting information about the listed topics. In some cases, you can get the GM’s permission to use a different but related skill, usually against a higher DC than normal. Some topics might appear on multiple lists, but the skills could give different information. For example, Arcana might tell you about the magical defenses of a golem, whereas Crafting could tell you about its sturdy resistance to physical attacks. \n\t-Arcana: Arcane theories, magical traditions, creatures of arcane significance, and arcane planes. \n\t- Crafting: Alchemical reactions and creatures, item value, engineering, unusual materials, and constructs. \n\t- Lore: The subject of the Lore skill’s subcategory. \n\t- Medicine: Diseases, poisons, wounds, and forensics. \n\t- Nature: The environment, flora, geography, weather, creatures of natural origin, and natural planes. \n\t- Occultism: Ancient mysteries, obscure philosophy, creatures of occult significance, and esoteric planes. \n\t- Religion: Divine agents, divine planes, theology, obscure myths, and creatures of religious significance. \n\t- Society: Local history, key personalities, legal institutions, societal structure, and humanoid culture.\n\tThe GM might allow checks to Recall Knowledge using other skills. For example, you might assess the skill of an acrobat using Acrobatics. If you’re using a physical skill (like in this example), the GM will most likely have you use a mental ability score —typically Intelligence— instead of the skill’s normal physical ability score. \n\tCommon Lore Subcategories \n\tYou can learn any Lore skill your GM gives you permission to take. The following list covers a wide variety of common Lore topics appropriate for most campaigns. Backgrounds often grant you a Lore from this list. \n\t- Academia Lore \n\t- Accounting Lore \n\t- Architecture Lore \n\t- Art Lore \n\t- Circus Lore \n\t- Engineering Lore \n\t- Farming Lore \n\t- Fishing LoreFortune-Telling Lore \n\t- Games Lore \n\t- Genealogy Lore \n\t- Gladiatorial Lore \n\t- Guild Lore \n\t- Heraldry Lore \n\t- Herbalism Lore \n\t- Hunting Lore \n\t- Labor Lore \n\t- Legal Lore \n\t- Library Lore \n\t- Lore about a specific deity (Abadar Lore, Iomedae Lore, etc.) \n\t- Lore about a specific creature or narrow category of creatures (Demon Lore, Owlbear Lore, Vampire Lore, etc.) \n\t- Lore of a specific plane other than the Material Plane, or the plane in which the game is set if not the Material Plane (Abyss Lore, Astral Plane Lore, Heaven Lore, etc.) \n\t- Lore about a specific settlement (Absalom Lore, Magnimar Lore, etc.) \n\t- Lore about a specific terrain (Mountain Lore, River Lore, etc.) \n\t- Lore of a type of food or drink (Alcohol Lore, Baking Lore, Butchering Lore, Cooking Lore, Tea Lore, etc.) \n\t- Mercantile Lore \n\t-Midwifery Lore \n\t- Milling Lore \n\t- Mining Lore \n\t- Sailing Lore \n\t- Scouting Lore \n\t- Scribing Lore \n\t- Stabling Lore \n\t- Tanning Lore \n\t- Theater Lore \n\t- Underworld Lore \n\t- Warfare Lore",
+            "criticalSuccess": "You recall the knowledge accurately and gain additional information or context.",
+            "success": "You recall the knowledge accurately or gain a useful clue about your current situation.",
+            "failure": "",
+            "criticalFailure": "You recall incorrect information or gain an erroneous or misleading clue.",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "earn income (lore)",
+            "skillGroup": "lore",
+            "keyAbility": "intelligence",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "downtime",
+            "traits": [],
+            "requirement": "",
+            "description": "Earn Income by using your knowledge to practice a trade. \n\tYou use one of your skills to make money during downtime. The GM assigns a task level representing the most lucrative job available. You can search for lower-level tasks, with the GM determining whether you find any. Sometimes you can attempt to find better work than the initial offerings, though this takes time and requires using the Diplomacy skill to Gather Information, doing some research, or socializing. \n\tWhen you take on a job, the GM secretly sets the DC of your skill check. After your first day of work, you roll to determine your earnings. You gain an amount of income based on your result, the task’s level, and your proficiency rank (as listed on Table 4–2: Income Earned). \n\tYou can continue working at the task on subsequent days without needing to roll again. For each day you spend after the first, you earn the same amount as the first day, up until the task’s completion. The GM determines how long you can work at the task. Most tasks last a week or two, though some can take months or even years.",
+            "criticalSuccess": "You do outstanding work. Gain the amount of currency listed for the task level + 1 and your proficiency rank.",
+            "success": "You do competent work. Gain the amount of currency listed for the task level and your proficiency rank.",
+            "failure": "You do shoddy work and get paid the bare minimum for your time. Gain the amount of currency listed in the failure column for the task level. The GM will likely reduce how long you can continue at the task.",
+            "criticalFailure": "You earn nothing for your work and are fired immediately. You can’t continue at the task. Your reputation suffers, potentially making it difficult for you to find rewarding jobs in that community in the future.",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "recall knowledge (medicine)",
+            "skillGroup": "medicine",
+            "keyAbility": "wisdom",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "concentrate",
+                "secret"
+            ],
+            "requirement": "",
+            "description": "Recall Knowledge about diseases, injuries, poisons, and other ailments. You can use this to perform forensic examinations if you spend 10 minutes (or more, as determined by the GM) checking for evidence such as wound patterns. This is most useful when determining how a body was injured or killed.\n\tYou attempt a skill check to try to remember a bit of knowledge regarding a topic related to that skill. The GM determines the DCs for such checks and which skills apply. \n\tThe following skills can be used to Recall Knowledge, getting information about the listed topics. In some cases, you can get the GM’s permission to use a different but related skill, usually against a higher DC than normal. Some topics might appear on multiple lists, but the skills could give different information. For example, Arcana might tell you about the magical defenses of a golem, whereas Crafting could tell you about its sturdy resistance to physical attacks. \n\t-Arcana: Arcane theories, magical traditions, creatures of arcane significance, and arcane planes. \n\t- Crafting: Alchemical reactions and creatures, item value, engineering, unusual materials, and constructs. \n\t- Lore: The subject of the Lore skill’s subcategory. \n\t- Medicine: Diseases, poisons, wounds, and forensics. \n\t- Nature: The environment, flora, geography, weather, creatures of natural origin, and natural planes. \n\t- Occultism: Ancient mysteries, obscure philosophy, creatures of occult significance, and esoteric planes. \n\t- Religion: Divine agents, divine planes, theology, obscure myths, and creatures of religious significance. \n\t- Society: Local history, key personalities, legal institutions, societal structure, and humanoid culture.\n\tThe GM might allow checks to Recall Knowledge using other skills. For example, you might assess the skill of an acrobat using Acrobatics. If you’re using a physical skill (like in this example), the GM will most likely have you use a mental ability score —typically Intelligence— instead of the skill’s normal physical ability score.",
+            "criticalSuccess": "You recall the knowledge accurately and gain additional information or context.",
+            "success": "You recall the knowledge accurately or gain a useful clue about your current situation.",
+            "failure": "",
+            "criticalFailure": "You recall incorrect information or gain an erroneous or misleading clue.",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "administer first aid",
+            "skillGroup": "medicine",
+            "keyAbility": "wisdom",
+            "competence": "untrained",
+            "type": "activity",
+            "duration": 2,
+            "mode": "encounter",
+            "traits": [
+                "manipulate"
+            ],
+            "requirement": "You have healer’s tools (page 290).",
+            "description": "You perform first aid on an adjacent creature that is dying or bleeding. If a creature is both dying and bleeding, choose which ailment you’re trying to treat before you roll. You can Administer First Aid again to attempt to remedy the other effect. \n\t- Stabilize: Attempt a Medicine check on a creature that has 0 Hit Points and the dying condition. The DC is equal to 5 + that creature’s recovery roll DC (typically 15 + its dying value). \n\t- Stop Bleeding: Attempt a Medicine check on a creature that is taking persistent bleed damage (page 452), giving them a chance to make another flat check to remove the persistent damage. The DC is usually the DC of the effect that caused the bleed.",
+            "criticalSuccess": "",
+            "success": "If you’re trying to stabilize, the creature loses the dying condition (but remains unconscious). If you’re trying to stop bleeding, the creature attempts a flat check to end the bleeding.",
+            "failure": "",
+            "criticalFailure": "If you were trying to stabilize, the creature’s dying value increases by 1. If you were trying to stop bleeding, it immediately takes an amount of damage equal to its persistent bleed damage.",
+            "affects": [
+                "others"
+            ]
+        },
+        {
+            "name": "treat disease",
+            "skillGroup": "medicine",
+            "keyAbility": "wisdom",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "downtime",
+            "traits": [
+                "manipulate"
+            ],
+            "requirement": "You have healer’s tools (page 290).",
+            "description": "You spend at least 8 hours caring for a diseased creature. Attempt a Medicine check against the disease’s DC. After you attempt to Treat a Disease for a creature, you can’t try again until after that creature’s next save against the disease.",
+            "criticalSuccess": "You grant the creature a +4 circumstance bonus to its next saving throw against the disease.",
+            "success": "You grant the creature a +2 circumstance bonus to its next saving throw against the disease.",
+            "failure": "",
+            "criticalFailure": "Your efforts cause the creature to take a –2 circumstance penalty to its next save against the disease.",
+            "affects": [
+                "others"
+            ]
+        },
+        {
+            "name": "treat poison",
+            "skillGroup": "medicine",
+            "keyAbility": "wisdom",
+            "competence": "trained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "manipulate"
+            ],
+            "requirement": "You have healer’s tools (page 290).",
+            "description": "You treat a patient to prevent the spread of poison. Attempt a Medicine check against the poison’s DC. After you attempt to Treat a Poison for a creature, you can’t try again until after the next time that creature attempts a save against the poison.",
+            "criticalSuccess": "You grant the creature a +4 circumstance bonus to its next saving throw against the poison.",
+            "success": "You grant the creature a +2 circumstance bonus to its next saving throw against the poison.",
+            "failure": "",
+            "criticalFailure": "Your efforts cause the creature to take a –2 circumstance penalty to its next save against the poison.",
+            "affects": [
+                "others"
+            ]
+        },
+        {
+            "name": "treat wounds",
+            "skillGroup": "medicine",
+            "keyAbility": "wisdom",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "exploration",
+            "traits": [
+                "healing",
+                "manipulate"
+            ],
+            "requirement": "You have healer’s tools (page 290).",
+            "description": "You spend 10 minutes treating one injured living creature (targeting yourself, if you so choose). The target is then temporarily immune to Treat Wounds actions for 1 hour, but this interval overlaps with the time you spent treating (so a patient can be treated once per hour, not once per 70 minutes). \n\tThe Medicine check DC is usually 15, though the GM might adjust it based on the circumstances, such as treating a patient outside in a storm, or treating magically cursed wounds. If you’re an expert in Medicine, you can instead attempt a DC 20 check to increase the Hit Points regained by 10; if you’re a master of Medicine, you can instead attempt a DC 30 check to increase the Hit Points regained by 30; and if you’re legendary, you can instead attempt a DC 40 check to increase the Hit Points regained by 50. The damage dealt on a critical failure remains the same. \n\tIf you succeed at your check, you can continue treating the target to grant additional healing. If you treat them for a total of 1 hour, double the Hit Points they regain from Treat Wounds. \n\tThe result of your Medicine check determines how many Hit Points the target regains.",
+            "criticalSuccess": "The target regains 4d8 Hit Points, and its wounded condition is removed.",
+            "success": "The target regains 2d8 Hit Points, and its wounded condition is removed.",
+            "failure": "",
+            "criticalFailure": "The target takes 1d8 damage.",
+            "affects": [
+                "player",
+                "others"
+            ]
+        },
+        {
+            "name": "recall knowledge (nature)",
+            "skillGroup": "nature",
+            "keyAbility": "wisdom",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "concentrate",
+                "secret"
+            ],
+            "requirement": "",
+            "description": "Recall Knowledge about fauna, flora, geography, weather, the environment, creatures of natural origin (like animals, beasts, fey, and plants), the First World, the Material Plane, and the Elemental Planes.\n\tYou attempt a skill check to try to remember a bit of knowledge regarding a topic related to that skill. The GM determines the DCs for such checks and which skills apply. \n\tThe following skills can be used to Recall Knowledge, getting information about the listed topics. In some cases, you can get the GM’s permission to use a different but related skill, usually against a higher DC than normal. Some topics might appear on multiple lists, but the skills could give different information. For example, Arcana might tell you about the magical defenses of a golem, whereas Crafting could tell you about its sturdy resistance to physical attacks. \n\t-Arcana: Arcane theories, magical traditions, creatures of arcane significance, and arcane planes. \n\t- Crafting: Alchemical reactions and creatures, item value, engineering, unusual materials, and constructs. \n\t- Lore: The subject of the Lore skill’s subcategory. \n\t- Medicine: Diseases, poisons, wounds, and forensics. \n\t- Nature: The environment, flora, geography, weather, creatures of natural origin, and natural planes. \n\t- Occultism: Ancient mysteries, obscure philosophy, creatures of occult significance, and esoteric planes. \n\t- Religion: Divine agents, divine planes, theology, obscure myths, and creatures of religious significance. \n\t- Society: Local history, key personalities, legal institutions, societal structure, and humanoid culture.\n\tThe GM might allow checks to Recall Knowledge using other skills. For example, you might assess the skill of an acrobat using Acrobatics. If you’re using a physical skill (like in this example), the GM will most likely have you use a mental ability score —typically Intelligence— instead of the skill’s normal physical ability score.",
+            "criticalSuccess": "You recall the knowledge accurately and gain additional information or context.",
+            "success": "You recall the knowledge accurately or gain a useful clue about your current situation.",
+            "failure": "",
+            "criticalFailure": "You recall incorrect information or gain an erroneous or misleading clue.",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "command an animal",
+            "skillGroup": "nature",
+            "keyAbility": "wisdom",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "auditory",
+                "concentrate"
+            ],
+            "requirement": "",
+            "description": "You issue an order to an animal. Attempt a Nature check against the animal’s Will DC. The GM might adjust the DC if the animal has a good attitude toward you, you suggest a course of action it was predisposed toward, or you offer it a treat. \n\tYou automatically fail if the animal is hostile or unfriendly to you. If the animal is helpful to you, increase your degree of success by one step. You might be able to Command an Animal more easily with a feat like Ride (page 266). \n\tMost animals know the Leap, Seek, Stand, Stride, and Strike basic actions. If an animal knows an activity, such as a horse’s Gallop, you can Command the Animal to perform the activity, but you must spend as many actions on Command an Animal as the activity’s number of actions. You can also spend multiple actions to Command the Animal to perform that number of basic actions on its next turn; for instance, you could spend 3 actions to Command an Animal to Stride three times or to Stride twice and then Strike. \n\t Commanded Animals \n\tIssuing commands to an animal doesn’t always go smoothly. An animal is an independent creature with limited intelligence. Most animals understand only the simplest instructions, so you might be able to instruct your animal to move to a certain square but not dictate a specific path to get there, or command it to attack a certain creature but not to make its attack nonlethal. The GM decides the specifics of the action your animal uses. \n\tThe animal does what you commanded as soon as it can, usually as its first action on its next turn. If you successfully commanded it multiple times, it does what you said in order. It forgets all commands beyond what it can accomplish on its turn. If multiple people command the same animal, the GM determines how the animal reacts. The GM might also make the DC higher if someone has already tried to Command the Animal that round.",
+            "criticalSuccess": "",
+            "success": "The animal does as you command on its next turn.",
+            "failure": "The animal is hesitant or resistant, and it does nothing.",
+            "criticalFailure": "The animal misbehaves or misunderstands, and it takes some other action determined by the GM.",
+            "affects": [
+                "others"
+            ]
+        },
+        {
+            "name": "identify magic (nature)",
+            "skillGroup": "nature",
+            "keyAbility": "wisdom",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "exploration",
+            "traits": [
+                "concentrate",
+                "secret"
+            ],
+            "requirement": "",
+            "description": "Identify Magic, particularly primal magic. \n\tOnce you discover that an item, location, or ongoing effect is magical, you can spend 10 minutes to try to identify the particulars of its magic. If your attempt is interrupted, you must start over. The GM sets the DC for your check. Cursed or esoteric subjects usually have higher DCs or might even be impossible to identify using this activity alone. Heightening a spell doesn’t increase the DC to identify it.",
+            "criticalSuccess": "You learn all the attributes of the magic, including its name (for an effect), what it does, any means of activating it (for an item or location), and whether it is cursed.",
+            "success": "For an item or location, you get a sense of what it does and learn any means of activating it. For an ongoing effect (such as a spell with a duration), you learn the effect’s name and what it does. You can’t try again in hopes of getting a critical success.",
+            "failure": "You fail to identify the magic and can’t try again for 1 day.",
+            "criticalFailure": "You misidentify the magic as something else of the GM’s choice.",
+            "affects": [
+                "item",
+                "environment"
+            ]
+        },
+        {
+            "name": "learn a spell (nature)",
+            "skillGroup": "nature",
+            "keyAbility": "wisdom",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "exploration",
+            "traits": [
+                "concentrate"
+            ],
+            "requirement": "You must be trained in Nature. \n\tYou have a spellcasting class feature, and the spell you want to learn is on your magical tradition’s spell list.",
+            "description": "Learn a Spell from the primal tradition. \n\tYou can gain access to a new spell of your tradition from someone who knows that spell or from magical writing like a spellbook or scroll. If you can cast spells of multiple traditions, you can Learn a Spell of any of those traditions, but you must use the corresponding skill to do so. For example, if you were a cleric with the bard multiclass archetype, you couldn’t use Religion to add an occult spell to your bardic spell repertoire. \n\tTo learn the spell, you must do the following: \n\t-Spend 1 hour per level of the spell, during which you must remain in conversation with a person who knows the spell or have the magical writing in your possession. \n\t-Have materials with the Price indicated in Table 4–3. \n\t-Attempt a skill check for the skill corresponding to your tradition (DC determined by the GM, often close to the DC on Table 4–3). Uncommon or rare spells have higher DCs; full guidelines for the GM appear on page 503. \n\tIf you have a spellbook, Learning a Spell lets you add the spell to your spellbook; if you prepare spells from a list, it’s 4 added to your list; if you have a spell repertoire, you can select it when you add or swap spells.",
+            "criticalSuccess": "You expend half the materials and learn the spell.",
+            "success": "You expend the materials and learn the spell.",
+            "failure": "You fail to learn the spell but can try again after you gain a level. The materials aren’t expended.",
+            "criticalFailure": "As failure, plus you expend half the materials.",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "recall knowledge (occultism)",
+            "skillGroup": "occultism",
+            "keyAbility": "intelligence",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "concentrate",
+                "secret"
+            ],
+            "requirement": "",
+            "description": "Recall Knowledge about ancient mysteries; obscure philosophies; creatures of occult significance (like aberrations, spirits, and oozes); and the Positive Energy, Negative Energy, Shadow, Astral, and Ethereal Planes. \n\tYou attempt a skill check to try to remember a bit of knowledge regarding a topic related to that skill. The GM determines the DCs for such checks and which skills apply.",
+            "criticalSuccess": "You recall the knowledge accurately and gain additional information or context.",
+            "success": "You recall the knowledge accurately or gain a useful clue about your current situation.",
+            "failure": "",
+            "criticalFailure": "You recall incorrect information or gain an erroneous or misleading clue.",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "decipher writing (occultism)",
+            "skillGroup": "occultism",
+            "keyAbility": "intelligence",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "exploration",
+            "traits": [
+                "concentrate",
+                "secret"
+            ],
+            "requirement": "You must be trained in occultism.",
+            "description": "Decipher Writing on occult topics, including complex metaphysical systems, syncretic principles, weird philosophies, and incoherent ramblings. \n\tYou attempt to decipher complicated writing or literature on an obscure topic. This usually takes 1 minute per page of text, but might take longer (typically an hour per page for decrypting ciphers or the like). The text must be in a language you can read, though the GM might allow you to attempt to decipher text written in an unfamiliar language using Society instead. \n\tThe DC is determined by the GM based on the state or complexity of the document. The GM might have you roll one check for a short text or a check for each section of a larger text.",
+            "criticalSuccess": "You understand the true meaning of the text.",
+            "success": "You understand the true meaning of the text. If it was a coded document, you know the general meaning but might not have a word-for-word translation.",
+            "failure": "You can’t understand the text and take a –2 circumstance penalty to further checks to decipher it.",
+            "criticalFailure": "You believe you understand the text on that page, but you have in fact misconstrued its message.",
+            "affects": [
+                "item"
+            ]
+        },
+        {
+            "name": "identify magic (occultism)",
+            "skillGroup": "occultism",
+            "keyAbility": "intelligence",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "exploration",
+            "traits": [
+                "concentrate",
+                "secret"
+            ],
+            "requirement": "You must be trained in occultism",
+            "description": "Identify Magic, particularly occult magic. \n\tOnce you discover that an item, location, or ongoing effect is magical, you can spend 10 minutes to try to identify the particulars of its magic. If your attempt is interrupted, you must start over. The GM sets the DC for your check. Cursed or esoteric subjects usually have higher DCs or might even be impossible to identify using this activity alone. Heightening a spell doesn’t increase the DC to identify it.",
+            "criticalSuccess": "You learn all the attributes of the magic, including its name (for an effect), what it does, any means of activating it (for an item or location), and whether it is cursed.",
+            "success": "For an item or location, you get a sense of what it does and learn any means of activating it. For an ongoing effect (such as a spell with a duration), you learn the effect’s name and what it does. You can’t try again in hopes of getting a critical success.",
+            "failure": "You fail to identify the magic and can’t try again for 1 day.",
+            "criticalFailure": "You misidentify the magic as something else of the GM’s choice.",
+            "affects": [
+                "item",
+                "environment"
+            ]
+        },
+        {
+            "name": "learn a spell (occultism)",
+            "skillGroup": "occultism",
+            "keyAbility": "intelligence",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "exploration",
+            "traits": [
+                "concentrate"
+            ],
+            "requirement": "You must be trained in occultism. You have a spellcasting class feature, and the spell you want to learn is on your magical tradition’s spell list.",
+            "description": "Learn a Spell from the occult tradition. \n\tYou can gain access to a new spell of your tradition from someone who knows that spell or from magical writing like a spellbook or scroll. If you can cast spells of multiple traditions, you can Learn a Spell of any of those traditions, but you must use the corresponding skill to do so. For example, if you were a cleric with the bard multiclass archetype, you couldn’t use Religion to add an occult spell to your bardic spell repertoire.\n\tTo learn the spell, you must do the following:\n\t-Spend 1 hour per level of the spell, during which you must remain in conversation with a person who knows the spell or have the magical writing in your possession. \n\t-Have materials with the Price indicated in Table 4–3. \n\t-Attempt a skill check for the skill corresponding to your tradition (DC determined by the GM, often close to the DC on Table 4–3). Uncommon or rare spells have higher DCs; full guidelines for the GM appear on page 503. \n\tIf you have a spellbook, Learning a Spell lets you add the spell to your spellbook; if you prepare spells from a list, it’s 4 added to your list; if you have a spell repertoire, you can select it when you add or swap spells.",
+            "criticalSuccess": "You expend half the materials and learn the spell.",
+            "success": "You expend the materials and learn the spell.",
+            "failure": "You fail to learn the spell but can try again after you gain a level. The materials aren’t expended.",
+            "criticalFailure": "As failure, plus you expend half the materials.",
+            "affects": [
+                "person"
+            ]
+        },
+        {
+            "name": "perform (orate or sing)",
+            "skillGroup": "performance",
+            "keyAbility": "charisma",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "concentrate",
+                "auditory",
+                "linguistic"
+            ],
+            "requirement": "",
+            "description": "When making a brief performance—one song, a quick dance, or a few jokes—you use the Perform action. This action is most useful when you want to prove your capability or impress someone quickly. Performing rarely has an impact on its own, but it might influence the DCs of subsequent Diplomacy checks against the observers—or even change their attitudes— if the GM sees fit.",
+            "criticalSuccess": "Your performance impresses the observers, and they’re likely to share stories of your ability.",
+            "success": "You prove yourself, and observers appreciate the quality of your performance.",
+            "failure": "Your performance falls flat.",
+            "criticalFailure": "You demonstrate only incompetence.",
+            "affects": [
+                "others"
+            ]
+        },
+        {
+            "name": "perform (act or comedy)",
+            "skillGroup": "performance",
+            "keyAbility": "charisma",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "concentrate",
+                "auditory",
+                "linguistic",
+                "visual"
+            ],
+            "requirement": "",
+            "description": "When making a brief performance—one song, a quick dance, or a few jokes—you use the Perform action. This action is most useful when you want to prove your capability or impress someone quickly. Performing rarely has an impact on its own, but it might influence the DCs of subsequent Diplomacy checks against the observers—or even change their attitudes— if the GM sees fit.",
+            "criticalSuccess": "Your performance impresses the observers, and they’re likely to share stories of your ability.",
+            "success": "You prove yourself, and observers appreciate the quality of your performance.",
+            "failure": "Your performance falls flat.",
+            "criticalFailure": "You demonstrate only incompetence.",
+            "affects": [
+                "others"
+            ]
+        },
+        {
+            "name": "perform (dance)",
+            "skillGroup": "performance",
+            "keyAbility": "charisma",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "concentrate",
+                "move",
+                "visual"
+            ],
+            "requirement": "",
+            "description": "When making a brief performance—one song, a quick dance, or a few jokes—you use the Perform action. This action is most useful when you want to prove your capability or impress someone quickly. Performing rarely has an impact on its own, but it might influence the DCs of subsequent Diplomacy checks against the observers—or even change their attitudes— if the GM sees fit.",
+            "criticalSuccess": "Your performance impresses the observers, and they’re likely to share stories of your ability.",
+            "success": "You prove yourself, and observers appreciate the quality of your performance.",
+            "failure": "Your performance falls flat.",
+            "criticalFailure": "You demonstrate only incompetence.",
+            "affects": [
+                "others"
+            ]
+        },
+        {
+            "name": "perform (play instrument)",
+            "skillGroup": "performance",
+            "keyAbility": "charisma",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "concentrate",
+                "auditory",
+                "manipulate"
+            ],
+            "requirement": "",
+            "description": "When making a brief performance—one song, a quick dance, or a few jokes—you use the Perform action. This action is most useful when you want to prove your capability or impress someone quickly. Performing rarely has an impact on its own, but it might influence the DCs of subsequent Diplomacy checks against the observers—or even change their attitudes— if the GM sees fit.",
+            "criticalSuccess": "Your performance impresses the observers, and they’re likely to share stories of your ability.",
+            "success": "You prove yourself, and observers appreciate the quality of your performance.",
+            "failure": "Your performance falls flat.",
+            "criticalFailure": "You demonstrate only incompetence.",
+            "affects": [
+                "others"
+            ]
+        },
+        {
+            "name": "earn income (performance)",
+            "skillGroup": "performance",
+            "keyAbility": "charisma",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "downtime",
+            "traits": [],
+            "requirement": "",
+            "description": "Earn Income by staging a performance. \n\tYou use one of your skills to make money during downtime. The GM assigns a task level representing the most lucrative job available. You can search for lower-level tasks, with the GM determining whether you find any. Sometimes you can attempt to find better work than the initial offerings, though this takes time and requires using the Diplomacy skill to Gather Information, doing some research, or socializing. \n\tWhen you take on a job, the GM secretly sets the DC of your skill check. After your first day of work, you roll to determine your earnings. You gain an amount of income based on your result, the task’s level, and your proficiency rank (as listed on Table 4–2: Income Earned). \n\tYou can continue working at the task on subsequent days without needing to roll again. For each day you spend after the first, you earn the same amount as the first day, up until the task’s completion. The GM determines how long you can work at the task. Most tasks last a week or two, though some can take months or even years.",
+            "criticalSuccess": "You do outstanding work. Gain the amount of currency listed for the task level + 1 and your proficiency rank.",
+            "success": "You do competent work. Gain the amount of currency listed for the task level and your proficiency rank.",
+            "failure": "You do shoddy work and get paid the bare minimum for your time. Gain the amount of currency listed in the failure column for the task level. The GM will likely reduce how long you can continue at the task.",
+            "criticalFailure": "You earn nothing for your work and are fired immediately. You can’t continue at the task. Your reputation suffers, potentially making it difficult for you to find rewarding jobs in that community in the future.",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "recall knowledge (religion)",
+            "skillGroup": "religion",
+            "keyAbility": "wisdom",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "concentrate",
+                "secret"
+            ],
+            "requirement": "",
+            "description": "Recall Knowledge about divine agents, the finer points of theology, obscure myths regarding a faith, and creatures of religious significance (like celestials, fiends, and undead), the Outer Sphere, and the Positive and Negative Energy Planes. \n\tYou attempt a skill check to try to remember a bit of knowledge regarding a topic related to that skill. The GM determines the DCs for such checks and which skills apply.",
+            "criticalSuccess": "You recall the knowledge accurately and gain additional information or context.",
+            "success": "You recall the knowledge accurately or gain a useful clue about your current situation.",
+            "failure": "",
+            "criticalFailure": "You recall incorrect information or gain an erroneous or misleading clue.",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "decipher writing (religion)",
+            "skillGroup": "religion",
+            "keyAbility": "wisdom",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "exploration",
+            "traits": [
+                "concentrate",
+                "secret"
+            ],
+            "requirement": "You must be trained in religion.",
+            "description": "Decipher Writing of a religious nature, including allegories, homilies, and proverbs. \n\tYou attempt to decipher complicated writing or literature on an obscure topic. This usually takes 1 minute per page of text, but might take longer (typically an hour per page for decrypting ciphers or the like). The text must be in a language you can read, though the GM might allow you to attempt to decipher text written in an unfamiliar language using Society instead. \n\tThe DC is determined by the GM based on the state or complexity of the document. The GM might have you roll one check for a short text or a check for each section of a larger text.",
+            "criticalSuccess": "You understand the true meaning of the text.",
+            "success": "You understand the true meaning of the text. If it was a coded document, you know the general meaning but might not have a word-for-word translation.",
+            "failure": "You can’t understand the text and take a –2 circumstance penalty to further checks to decipher it.",
+            "criticalFailure": "You believe you understand the text on that page, but you have in fact misconstrued its message.",
+            "affects": [
+                "item"
+            ]
+        },
+        {
+            "name": "identify magic (religion)",
+            "skillGroup": "religion",
+            "keyAbility": "wisdom",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "exploration",
+            "traits": [
+                "concentrate",
+                "secret"
+            ],
+            "requirement": "You must be trained in religion",
+            "description": "Identify Magic, particularly divine magic. \n\tOnce you discover that an item, location, or ongoing effect is magical, you can spend 10 minutes to try to identify the particulars of its magic. If your attempt is interrupted, you must start over. The GM sets the DC for your check. Cursed or esoteric subjects usually have higher DCs or might even be impossible to identify using this activity alone. Heightening a spell doesn’t increase the DC to identify it.",
+            "criticalSuccess": "You learn all the attributes of the magic, including its name (for an effect), what it does, any means of activating it (for an item or location), and whether it is cursed.",
+            "success": "For an item or location, you get a sense of what it does and learn any means of activating it. For an ongoing effect (such as a spell with a duration), you learn the effect’s name and what it does. You can’t try again in hopes of getting a critical success.",
+            "failure": "You fail to identify the magic and can’t try again for 1 day.",
+            "criticalFailure": "You misidentify the magic as something else of the GM’s choice.",
+            "affects": [
+                "item",
+                "environment"
+            ]
+        },
+        {
+            "name": "learn a spell (religion)",
+            "skillGroup": "religion",
+            "keyAbility": "wisdom",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "exploration",
+            "traits": [
+                "concentrate"
+            ],
+            "requirement": "You must be trained in religion. You have a spellcasting class feature, and the spell you want to learn is on your magical tradition’s spell list.",
+            "description": "Learn a Spell from the divine tradition. \n\tYou can gain access to a new spell of your tradition from someone who knows that spell or from magical writing like a spellbook or scroll. If you can cast spells of multiple traditions, you can Learn a Spell of any of those traditions, but you must use the corresponding skill to do so. For example, if you were a cleric with the bard multiclass archetype, you couldn’t use Religion to add an occult spell to your bardic spell repertoire.\n\tTo learn the spell, you must do the following:\n\t-Spend 1 hour per level of the spell, during which you must remain in conversation with a person who knows the spell or have the magical writing in your possession. \n\t-Have materials with the Price indicated in Table 4–3. \n\t-Attempt a skill check for the skill corresponding to your tradition (DC determined by the GM, often close to the DC on Table 4–3). Uncommon or rare spells have higher DCs; full guidelines for the GM appear on page 503. \n\tIf you have a spellbook, Learning a Spell lets you add the spell to your spellbook; if you prepare spells from a list, it’s 4 added to your list; if you have a spell repertoire, you can select it when you add or swap spells.",
+            "criticalSuccess": "You expend half the materials and learn the spell.",
+            "success": "You expend the materials and learn the spell.",
+            "failure": "You fail to learn the spell but can try again after you gain a level. The materials aren’t expended.",
+            "criticalFailure": "As failure, plus you expend half the materials.",
+            "affects": [
+                "person"
+            ]
+        },
+        {
+            "name": "recall knowledge (society)",
+            "skillGroup": "society",
+            "keyAbility": "intelligence",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "concentrate",
+                "secret"
+            ],
+            "requirement": "",
+            "description": "Recall Knowledge about local history, important personalities, legal institutions, societal structure, and humanoid cultures. The GM might allow Society to apply to other creatures that are major elements of society in your region, such as the draconic nobility in a kingdom of humans ruled by dragons. \n\tYou attempt a skill check to try to remember a bit of knowledge regarding a topic related to that skill. The GM determines the DCs for such checks and which skills apply.",
+            "criticalSuccess": "You recall the knowledge accurately and gain additional information or context.",
+            "success": "You recall the knowledge accurately or gain a useful clue about your current situation.",
+            "failure": "",
+            "criticalFailure": "You recall incorrect information or gain an erroneous or misleading clue.",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "subsist",
+            "skillGroup": "society",
+            "keyAbility": "intelligence",
+            "competence": "untrained",
+            "type": "action",
+            "duration": -1,
+            "mode": "downtime",
+            "traits": [],
+            "requirement": "",
+            "description": "Subsist in a settlement by finding shelter, scrounging, or begging for food. \n\tYou try to provide food and shelter for yourself, and possibly others as well, with a standard of living described on page 294. The GM determines the DC based on the nature of the place where you’re trying to Subsist. You might need a minimum proficiency rank to Subsist in particularly strange environments. Unlike most downtime activities, you can Subsist after 8 hours or less of exploration, but if you do, you take a –5 penalty.",
+            "criticalSuccess": "You either provide a subsistence living for yourself and one additional creature, or you improve your own food and shelter, granting yourself a comfortable living.",
+            "success": "You find enough food and shelter with basic protection from the elements to provide you a subsistence living.",
+            "failure": "You’re exposed to the elements and don’t get enough food, becoming fatigued until you attain sufficient food and shelter.",
+            "criticalFailure": "You attract trouble, eat something you shouldn’t, or otherwise worsen your situation. You take a –2 circumstance penalty to checks to Subsist for 1 week. You don’t find any food at all; if you don’t have any stored up, you’re in danger of starving or dying of thirst if you continue failing.",
+            "affects": [
+                "player",
+                "others"
+            ]
+        },
+        {
+            "name": "decipher writing (society)",
+            "skillGroup": "society",
+            "keyAbility": "intelligence",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "exploration",
+            "traits": [
+                "concentrate",
+                "secret"
+            ],
+            "requirement": "You must be trained in Society.",
+            "description": "Decipher Writing that’s a coded message, text written in an incomplete or archaic form, or in some cases, text in a language you don’t know. \n\tYou attempt to decipher complicated writing or literature on an obscure topic. This usually takes 1 minute per page of text, but might take longer (typically an hour per page for decrypting ciphers or the like). The text must be in a language you can read, though the GM might allow you to attempt to decipher text written in an unfamiliar language using Society instead. \n\tThe DC is determined by the GM based on the state or complexity of the document. The GM might have you roll one check for a short text or a check for each section of a larger text.",
+            "criticalSuccess": "You understand the true meaning of the text.",
+            "success": "You understand the true meaning of the text. If it was a coded document, you know the general meaning but might not have a word-for-word translation.",
+            "failure": "You can’t understand the text and take a –2 circumstance penalty to further checks to decipher it.",
+            "criticalFailure": "You believe you understand the text on that page, but you have in fact misconstrued its message.",
+            "affects": [
+                "item"
+            ]
+        },
+        {
+            "name": "create forgery",
+            "skillGroup": "society",
+            "keyAbility": "intelligence",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "downtime",
+            "traits": [
+                "secret"
+            ],
+            "requirement": "",
+            "description": "You create a forged document, usually over the course of a day or a week. You must have the proper writing material to create a forgery. When you Create a Forgery, the GM rolls a secret DC 20 Society check. If you succeed, the forgery is of good enough quality that passive observers can’t notice the fake. Only those who carefully examine the document and attempt a Perception or Society check against your Society DC can do so. \n\tIf the document’s handwriting doesn’t need to be specific to a person, you need only to have seen a similar document before, and you gain up to a +4 circumstance bonus to your check, as well as to your DC (the GM determines the bonus). To forge a specific person’s handwriting, you need a sample of that person’s handwriting. \n\tIf your check result was below 20, the forgery has some obvious signs of being a fake, so the GM compares your result to each passive observer’s Perception DC or Society DC, whichever is higher, using the success or failure results below. Once the GM rolls your check for a document, that same result is used against all passive observers’ DCs no matter how many creatures passively observe that document. \n\tAn observer who was fooled on a passive glance can still choose to closely scrutinize the documents on the lookout for a forgery, using different techniques and analysis methods beyond the surface elements you successfully forged with your original check. In that case, the observer can attempt a Perception or Society check against your Society DC (if they succeed, they know your document is a forgery).",
+            "criticalSuccess": "",
+            "success": "The observer does not detect the forgery.",
+            "failure": "The observer knows your document is a forgery.",
+            "criticalFailure": "",
+            "affects": [
+                "item"
+            ]
+        },
+        {
+            "name": "conceal an object",
+            "skillGroup": "stealth",
+            "keyAbility": "dexterity",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "manipulate",
+                "secret"
+            ],
+            "requirement": "",
+            "description": "You hide a small object on your person (such as a weapon of light Bulk). When you try to sneak a concealed object past someone who might notice it, the GM rolls your Stealth check and compares it to this passive observer’s Perception DC. Once the GM rolls your check for a concealed object, that same result is used no matter how many passive observers you try to sneak it past. If a creature is specifically searching you for an item, it can attempt a Perception check against your Stealth DC (finding the object on success). \n\tYou can also conceal an object somewhere other than your person, such as among undergrowth or in a secret compartment within a piece of furniture. In this case, characters Seeking in an area compare their Perception check results to your Stealth DC to determine whether they find the object.",
+            "criticalSuccess": "",
+            "success": "The object remains undetected.",
+            "failure": "The searcher finds the object.",
+            "criticalFailure": "",
+            "affects": [
+                "item"
+            ]
+        },
+        {
+            "name": "hide",
+            "skillGroup": "stealth",
+            "keyAbility": "dexterity",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "secret"
+            ],
+            "requirement": "",
+            "description": "You huddle behind cover or greater cover or deeper into concealment to become hidden, rather than observed. The GM rolls your Stealth check in secret and compares the result to the Perception DC of each creature you’re observed by but that you have cover or greater cover against or are concealed from. You gain the circumstance bonus from cover or greater cover to your check.",
+            "criticalSuccess": "",
+            "success": "If the creature could see you, you’re now hidden from it instead of observed. If you were hidden from or undetected by the creature, you retain that condition. \n\tIf you successfully become hidden to a creature but then cease to have cover or greater cover against it or be concealed from it, you become observed again. You cease being hidden if you do anything except Hide, Sneak, or Step. \n\tIf you attempt to Strike a creature, the creature remains flat- footed against that attack, and you then become observed. If you do anything else, you become observed just before you act unless the GM determines otherwise. The GM might allow you to perform a particularly unobtrusive action without being noticed, possibly requiring another Stealth check. \n\tIf a creature uses Seek to make you observed by it, you must successfully Hide to become hidden from it again.",
+            "failure": "",
+            "criticalFailure": "",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "sneak",
+            "skillGroup": "stealth",
+            "keyAbility": "dexterity",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "move",
+                "secret"
+            ],
+            "requirement": "",
+            "description": "You can attempt to move to another place while becoming or staying undetected. Stride up to half your Speed. (You can use Sneak while Burrowing, Climbing, Flying, or Swimming instead of Striding if you have the corresponding movement type; you must move at half that Speed.) \n\tIf you’re undetected by a creature and it’s impossible for that creature to observe you (for a typical creature, this includes when you’re invisible, the observer is blinded, or you’re in darkness and the creature can’t see in darkness), for any critical failure you roll on a check to Sneak, you get a failure instead. You also continue to be undetected if you lose cover or greater cover against or are no longer concealed from such a creature. \n\tAt the end of your movement, the GM rolls your Stealth check in secret and compares the result to the Perception DC of each creature you were hidden from or undetected by at the start of your movement. If you have cover or greater cover from the creature throughout your Stride, you gain the +2 circumstance bonus from cover (or +4 from greater cover) to your Stealth check. Because you’re moving, the bonus increase from Taking Cover doesn’t apply. You don’t get to roll against a creature if, at the end of your movement, you neither are concealed from it nor have cover or greater cover against it. You automatically become observed by such a creature.",
+            "criticalSuccess": "",
+            "success": "You’re undetected by the creature during your movement and remain undetected by the creature at the end of it. \n\tYou become observed as soon as you do anything other than Hide, Sneak, or Step. If you attempt to Strike a creature, the creature remains flat-footed against that attack, and you then become observed. If you do anything else, you become observed just before you act unless the GM determines otherwise. The GM might allow you to perform a particularly unobtrusive action without being noticed, possibly requiring another Stealth check. If you speak or make a deliberate loud noise, you become hidden instead of undetected. \n\tIf a creature uses Seek and you become hidden to it as a result, you must Sneak if you want to become undetected by that creature again.",
+            "failure": "A telltale sound or other sign gives your position away, though you still remain unseen. You’re hidden from the creature throughout your movement and remain so.",
+            "criticalFailure": "You’re spotted! You’re observed by the creature throughout your movement and remain so. If you’re invisible and were hidden from the creature, instead of being observed you’re hidden throughout your movement and remain so.",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "subsist",
+            "skillGroup": "survival",
+            "keyAbility": "wisdom",
+            "competence": "untrained",
+            "type": "action",
+            "duration": -1,
+            "mode": "downtime",
+            "traits": [],
+            "requirement": "",
+            "description": "Subsist in the wild by foraging for food and building shelter. \n\tYou try to provide food and shelter for yourself, and possibly others as well, with a standard of living described on page 294. The GM determines the DC based on the nature of the place where you’re trying to Subsist. You might need a minimum proficiency rank to Subsist in particularly strange environments. Unlike most downtime activities, you can Subsist after 8 hours or less of exploration, but if you do, you take a –5 penalty.",
+            "criticalSuccess": "You either provide a subsistence living for yourself and one additional creature, or you improve your own food and shelter, granting yourself a comfortable living.",
+            "success": "You find enough food and shelter with basic protection from the elements to provide you a subsistence living.",
+            "failure": "You’re exposed to the elements and don’t get enough food, becoming fatigued until you attain sufficient food and shelter.",
+            "criticalFailure": "You attract trouble, eat something you shouldn’t, or otherwise worsen your situation. You take a –2 circumstance penalty to checks to Subsist for 1 week. You don’t find any food at all; if you don’t have any stored up, you’re in danger of starving or dying of thirst if you continue failing.",
+            "affects": [
+                "player",
+                "others"
+            ]
+        },
+        {
+            "name": "sense direction",
+            "skillGroup": "survival",
+            "keyAbility": "wisdom",
+            "competence": "untrained",
+            "type": "action",
+            "duration": -1,
+            "mode": "exploration",
+            "traits": [
+                "secret"
+            ],
+            "requirement": "",
+            "description": "Using the stars, the position of the sun, traits of the geography or flora, or the behavior of fauna, you can stay oriented in the wild. Typically, you attempt a Survival check only once per day, but some environments or changes might necessitate rolling more often. The GM determines the DC and how long this activity takes (usually just a minute or so). More unusual locales or those you’re unfamiliar with might require you to have a minimum proficiency rank to Sense Direction. Without a compass, you take a –2 item penalty to checks to Sense Direction.",
+            "criticalSuccess": "You get an excellent sense of where you are. If you are in an environment with cardinal directions, you know them exactly.",
+            "success": "You gain enough orientation to avoid becoming hopelessly lost. If you are in an environment with cardinal directions, you have a sense of those directions.",
+            "failure": "",
+            "criticalFailure": "",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "cover tracks (exploration)",
+            "skillGroup": "survival",
+            "keyAbility": "wisdom",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "exploration",
+            "traits": [
+                "concentrate",
+                "move"
+            ],
+            "requirement": "",
+            "description": "You cover your tracks, moving up to half your travel Speed, using the rules on page 479). You don’t need to attempt a Survival check to cover your tracks, but anyone tracking you must succeed at a Survival check against your Survival DC if it is higher than the normal DC to Track. \n\tIn some cases, you might Cover Tracks in an encounter. In this case, Cover Tracks is a single action and doesn’t have the exploration trait.",
+            "criticalSuccess": "",
+            "success": "",
+            "failure": "",
+            "criticalFailure": "",
+            "affects": [
+                "others"
+            ]
+        },
+        {
+            "name": "cover tracks (encounter)",
+            "skillGroup": "survival",
+            "keyAbility": "wisdom",
+            "competence": "trained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "concentrate",
+                "move"
+            ],
+            "requirement": "",
+            "description": "You cover your tracks, moving up to half your travel Speed, using the rules on page 479). You don’t need to attempt a Survival check to cover your tracks, but anyone tracking you must succeed at a Survival check against your Survival DC if it is higher than the normal DC to Track. \n\tIn some cases, you might Cover Tracks in an encounter. In this case, Cover Tracks is a single action and doesn’t have the exploration trait.",
+            "criticalSuccess": "",
+            "success": "",
+            "failure": "",
+            "criticalFailure": "",
+            "affects": [
+                "others"
+            ]
+        },
+        {
+            "name": "track",
+            "skillGroup": "survival",
+            "keyAbility": "wisdom",
+            "competence": "trained",
+            "type": "action",
+            "duration": -1,
+            "mode": "exploration",
+            "traits": [
+                "concentrate",
+                "move"
+            ],
+            "requirement": "",
+            "description": "You follow tracks, moving at up to half your travel Speed, using the rules on page 479). After a successful check to Track, you can continue following the tracks at half your Speed without attempting additional checks for up to 1 hour. In some cases, you might Track in an encounter. In this case, Track is a single action and doesn’t have the exploration trait, but you might need to roll more often because you’re in a tense situation. The GM determines how often you must attempt this check. \n\tYou attempt your Survival check when you start Tracking, once every hour you continue tracking, and any time something significant changes in the trail. The GM determines the DCs for such checks, depending on the freshness of the trail, the weather, and the type of ground.",
+            "criticalSuccess": "",
+            "success": "You find the trail or continue to follow the one you’re already following.",
+            "failure": "You lose the trail but can try again after a 1-hour delay.",
+            "criticalFailure": "You lose the trail and can’t try again for 24 hours.",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "palm an object",
+            "skillGroup": "thievery",
+            "keyAbility": "dexterity",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "manipulate"
+            ],
+            "requirement": "",
+            "description": "Palming a small, unattended object without being noticed requires you to roll a single Thievery check against the Perception DCs of all creatures who are currently observing you. You take the object whether or not you successfully conceal that you did so. You can typically only Palm Objects of negligible Bulk, though the GM might determine otherwise depending on the situation.",
+            "criticalSuccess": "",
+            "success": "The creature does not notice you Palming the Object.",
+            "failure": "The creature notices you Palming the Object, and the GM determines the creature’s response.",
+            "criticalFailure": "",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "steal",
+            "skillGroup": "thievery",
+            "keyAbility": "dexterity",
+            "competence": "untrained",
+            "type": "action",
+            "duration": 1,
+            "mode": "encounter",
+            "traits": [
+                "manipulate"
+            ],
+            "requirement": "",
+            "description": "You try to take a small object from another creature without being noticed. Typically, you can Steal only an object of negligible Bulk, and you automatically fail if the creature who has the object is in combat or on guard. \n\tAttempt a Thievery check to determine if you successfully Steal the object. The DC to Steal is usually the Perception DC of the creature wearing the object. This assumes the object is worn but not closely guarded (like a loosely carried pouch filled with coins, or an object within such a pouch). If the object is in a pocket or similarly protected, you take a –5 penalty to your Thievery check. The GM might increase the DC of your check if the nature of the object makes it harder to steal (such as a very small item in a large pack, or a sheet of parchment mixed in with other documents). \n\tYou might also need to compare your Thievery check result against the Perception DCs of observers other than the person wearing the object. The GM may increase the Perception DCs of these observers if they’re distracted.",
+            "criticalSuccess": "",
+            "success": "You steal the item without the bearer noticing, or an observer doesn’t see you take or attempt to take the item.",
+            "failure": "The item’s bearer notices your attempt before you can take the object, or an observer sees you take or attempt to take the item. The GM determines the response of any creature that notices your theft.",
+            "criticalFailure": "",
+            "affects": [
+                "player"
+            ]
+        },
+        {
+            "name": "disable a device",
+            "skillGroup": "thievery",
+            "keyAbility": "dexterity",
+            "competence": "trained",
+            "type": "activity",
+            "duration": 2,
+            "mode": "encounter",
+            "traits": [
+                "manipuate"
+            ],
+            "requirement": "Some devices require you to use thieves’ tools (page 291) when disabling them.",
+            "description": "This action allows you to disarm a trap or another complex device. Often, a device requires numerous successes before becoming disabled, depending on its construction and complexity. Thieves’ tools are helpful and sometimes even required to Disable a Device, as determined by the GM, and sometimes a device requires a higher proficiency rank in Thievery to disable it. \n\tYour Thievery check result determines how much progress you make.",
+            "criticalSuccess": "You disable the device, or you achieve two successes toward disabling a complex device. You leave no trace of your tampering, and you can rearm the device later, if that type of device can be rearmed.",
+            "success": "You disable the device, or you achieve one success toward disabling a complex device.",
+            "failure": "",
+            "criticalFailure": "You trigger the device.",
+            "affects": [
+                "item"
+            ]
+        },
+        {
+            "name": "pick a lock",
+            "skillGroup": "thievery",
+            "keyAbility": "dexterity",
+            "competence": "trained",
+            "type": "activity",
+            "duration": 2,
+            "mode": "encounter",
+            "traits": [
+                "manipulate"
+            ],
+            "requirement": "You have thieves’ tools (page 291).",
+            "description": "Opening a lock without a key is very similar to Disabling a Device, but the DC of the check is determined by the complexity and construction of the lock you are attempting to pick (locks and their DCs are found on page 290). Locks of higher qualities might require multiple successes to unlock, since otherwise even an unskilled burglar could easily crack the lock by attempting the check until they rolled a natural 20. If you lack the proper tools, the GM might let you used improvised picks, which are treated as shoddy tools, depending on the specifics of the lock.",
+            "criticalSuccess": "You unlock the lock, or you achieve two successes toward opening a complex lock. You leave no trace of your tampering.",
+            "success": "You open the lock, or you achieve one success toward opening a complex lock.",
+            "failure": "",
+            "criticalFailure": "You break your tools. Fixing them requires using Crafting to Repair them or else swapping in replacement picks (costing 3 sp, or 3 gp for infiltrator thieves’ tools).",
+            "affects": [
+                "item"
+            ]
+        }
+    ]
+}

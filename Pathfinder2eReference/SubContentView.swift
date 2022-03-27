@@ -13,18 +13,15 @@ import SwiftUI
 struct SubContentView: View {
     var category: Category? = nil
     
-    @State private var selectedItem: String? = nil
-    
+
     var body: some View {
         switch category {
         case .actions:
             ActionsView()
-        case .skills:
-            SkillsView()
         case .conditions:
             ConditionsView()
-        case .all:
-            AllItemsView()
+        case .skills:
+            SkillsView()
         default:
             ScrollView {
                 Text("Select a category from the left panel to reveal selectable items in this panel.  If the left panel is not visible use the toolbar button, above, to reveal it.")
