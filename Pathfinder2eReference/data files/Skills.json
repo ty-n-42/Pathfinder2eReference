@@ -8,7 +8,7 @@
             "competence": "untrained",
             "type": "action",
             "duration": 1,
-            "mode": "ancounter",
+            "mode": "encounter",
             "traits": [
                 "move"
             ],
@@ -170,7 +170,7 @@
             "failure": "You fail to learn the spell but can try again after you gain a level. The materials aren’t expended.",
             "criticalFailure": "As failure, plus you expend half the materials.",
             "affects": [
-                "person"
+                "player"
             ]
         },
         {
@@ -218,9 +218,9 @@
             "skillGroup": "athletics",
             "keyAbility": "strength",
             "competence": "untrained",
-            "type": "encounter",
+            "type": "action",
             "duration": 1,
-            "mode": "action",
+            "mode": "encounter",
             "traits": [
                 "attack"
             ],
@@ -260,7 +260,7 @@
             "name": "high jump",
             "skillGroup": "athletics",
             "keyAbility": "strength",
-            "competence": "untrined",
+            "competence": "untrained",
             "type": "activity",
             "duration": 2,
             "mode": "encounter",
@@ -341,9 +341,9 @@
             "skillGroup": "athletics",
             "keyAbility": "strength",
             "competence": "untrained",
-            "type": "encounter",
+            "type": "action",
             "duration": 1,
-            "mode": "action",
+            "mode": "encounter",
             "traits": [
                 "attack"
             ],
@@ -575,7 +575,7 @@
         },
         {
             "name": "gather information",
-            "skillGroup": "diplomancy",
+            "skillGroup": "diplomacy",
             "keyAbility": "charisma",
             "competence": "untrained",
             "type": "action",
@@ -1013,7 +1013,7 @@
             "failure": "You fail to learn the spell but can try again after you gain a level. The materials aren’t expended.",
             "criticalFailure": "As failure, plus you expend half the materials.",
             "affects": [
-                "person"
+                "player"
             ]
         },
         {
@@ -1213,7 +1213,7 @@
             "failure": "You fail to learn the spell but can try again after you gain a level. The materials aren’t expended.",
             "criticalFailure": "As failure, plus you expend half the materials.",
             "affects": [
-                "person"
+                "player"
             ]
         },
         {
@@ -1239,7 +1239,7 @@
             ]
         },
         {
-            "name": "subsist",
+            "name": "subsist (society)",
             "skillGroup": "society",
             "keyAbility": "intelligence",
             "competence": "untrained",
@@ -1367,7 +1367,7 @@
             ]
         },
         {
-            "name": "subsist",
+            "name": "subsist (survival)",
             "skillGroup": "survival",
             "keyAbility": "wisdom",
             "competence": "untrained",
@@ -1524,7 +1524,7 @@
             "duration": 2,
             "mode": "encounter",
             "traits": [
-                "manipuate"
+                "manipulate"
             ],
             "requirement": "Some devices require you to use thieves’ tools (page 291) when disabling them.",
             "description": "This action allows you to disarm a trap or another complex device. Often, a device requires numerous successes before becoming disabled, depending on its construction and complexity. Thieves’ tools are helpful and sometimes even required to Disable a Device, as determined by the GM, and sometimes a device requires a higher proficiency rank in Thievery to disable it. \n\tYour Thievery check result determines how much progress you make.",

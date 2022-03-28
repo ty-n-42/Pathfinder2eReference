@@ -24,6 +24,7 @@
 		48E099D527E012CE00FC341F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48E099D427E012CE00FC341F /* Assets.xcassets */; };
 		48E099D827E012CE00FC341F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48E099D727E012CE00FC341F /* Preview Assets.xcassets */; };
 		48E099E127E02AF100FC341F /* Conditions.json in Resources */ = {isa = PBXBuildFile; fileRef = 48E099E027E02AF100FC341F /* Conditions.json */; };
+		48EC044F27F1515A00EC1FEF /* SkillsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EC044E27F1515A00EC1FEF /* SkillsDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		48E099D727E012CE00FC341F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		48E099D927E012CE00FC341F /* Pathfinder2eReference.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pathfinder2eReference.entitlements; sourceTree = "<group>"; };
 		48E099E027E02AF100FC341F /* Conditions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Conditions.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
+		48EC044E27F1515A00EC1FEF /* SkillsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +91,9 @@
 				48A2C15227E30E0B0026CBF7 /* SkillsView.swift */,
 				483D990A27E556FB00016E36 /* AllItemsView.swift */,
 				48A2C14E27E30D760026CBF7 /* DetailView.swift */,
-				483D990C27E5764500016E36 /* ConditionsDetailView.swift */,
 				4830CC1C27E6A6A600AE763F /* ActionsDetailView.swift */,
+				483D990C27E5764500016E36 /* ConditionsDetailView.swift */,
+				48EC044E27F1515A00EC1FEF /* SkillsDetailView.swift */,
 				48E099D427E012CE00FC341F /* Assets.xcassets */,
 				48E099D927E012CE00FC341F /* Pathfinder2eReference.entitlements */,
 				48E099D627E012CE00FC341F /* Preview Content */,
@@ -195,6 +198,7 @@
 				4830CC1F27E6F42400AE763F /* Styles.swift in Sources */,
 				483D990D27E5764500016E36 /* ConditionsDetailView.swift in Sources */,
 				483D990B27E556FB00016E36 /* AllItemsView.swift in Sources */,
+				48EC044F27F1515A00EC1FEF /* SkillsDetailView.swift in Sources */,
 				4830CC1D27E6A6A600AE763F /* ActionsDetailView.swift in Sources */,
 				48A2C14F27E30D760026CBF7 /* DetailView.swift in Sources */,
 				48A2C15527E312A80026CBF7 /* SubContentView.swift in Sources */,

@@ -20,27 +20,26 @@ struct ConditionsView: View {
                 ForEach(conditions?.conditions ?? Array<Condition>(), id:\.name) { condition in
                     NavigationLink(destination: ConditionsDetailView(condition: condition), tag: condition.name, selection: $selectedCondition) {
                         HStack {
-                            Label(condition.name, systemImage: "doc.text")
+                            Label(condition.name.isEmpty ? "!! DATA ERROR !!" : condition.name.capitalized, systemImage: "doc.text")
                             Spacer()
                             Image(systemName: "person")
                                 .foregroundColor(Color.gray)
                         }
                     }
                     .id(condition.name)
+                    .frame(height: 20.0)
                 }
             }
             .listStyle(SidebarListStyle())
-            .navigationTitle(selectedCondition == nil ? Category.conditions.rawValue.capitalized : "\(selectedCondition!) condition")
+            .navigationTitle(selectedCondition == nil ? Category.conditions.rawValue.capitalized : "\(selectedCondition!.capitalized) condition")
             .onAppear() {
                 conditions = Conditions.load(jsonResource: "Conditions")
                 selectedCondition = lastSelectedCondition.isEmpty ? ( conditions?.conditions.first?.name ?? nil ) : lastSelectedCondition
-                
-                scroller.scrollTo(selectedCondition, anchor: .center)
+                scroller.scrollTo(selectedCondition)
             }
             .onChange(of: selectedCondition) { newValue in
                 lastSelectedCondition = newValue ?? ""
-                
-                scroller.scrollTo(newValue, anchor: .center)
+                scroller.scrollTo(newValue)
             }
             
         }

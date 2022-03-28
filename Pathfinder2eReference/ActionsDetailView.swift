@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// ***** These views below are reused in other DetailView structs *****
 struct Name: View {
     let name: String
     let imageName: String
@@ -37,6 +38,7 @@ struct Affects: View {
             ForEach(affects.sorted(by: { $0.rawValue <= $1.rawValue }), id: \.rawValue) { affect in
                 Text(affect.rawValue)
                     .modifier(ColoredListText(color: royalBlue))
+                    .lineLimit(1)
             }
         }
     }
@@ -56,6 +58,54 @@ struct TitleAndText: View {
     }
 }
 
+struct DurationAndType: View {
+    let duration: Int
+    let type: Behaviour
+    
+    var body: some View {
+        HStack {
+            switch duration {
+            case 0:
+                Image(systemName: "0.circle")
+                    .foregroundStyle(.gray)
+            case 1:
+                Image(systemName: "1.circle")
+                    .foregroundStyle(.gray)
+            case 2:
+                Image(systemName: "2.circle")
+                    .foregroundStyle(.gray)
+            case 3:
+                Image(systemName: "3.circle")
+                    .foregroundStyle(.gray)
+            default:
+                Image(systemName: "questionmark.circle")
+                    .foregroundStyle(.gray)
+            }
+            
+            Text(type.rawValue.capitalized)
+                .modifier(HeadingText(padded: false))
+        }
+    }
+}
+
+struct Traits: View {
+    let traits: Set<Trait>
+    
+    var body: some View {
+        HStack {
+            Text("traits:")
+                .modifier(NormalText())
+                .frame(minHeight: 20.0)
+            ForEach(traits.sorted(by: { $0.rawValue <= $1.rawValue }), id: \.rawValue) { trait in
+                Text(trait.rawValue)
+                    .modifier(ColoredListText(color: tomato))
+                    .lineLimit(1)
+            }
+        }
+    }
+}
+
+// ***** The views below are NOT reused in other structs *****
 struct ActionsDetailView: View {
     let action: Action
     
@@ -66,11 +116,13 @@ struct ActionsDetailView: View {
             Affects(affects: action.affects)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
-            DurationAndType(action: action)
+            DurationAndType(duration: action.duration, type: action.type)
                 .padding(.top)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            Traits(action: action)
+            Traits(traits: action.traits)
                 .frame(maxWidth: .infinity, alignment: .leading)
+            
+            // mode
 
             ScrollView([.vertical], showsIndicators: true) {
                 TitleAndText(title: "Trigger", text: action.trigger)
@@ -89,52 +141,7 @@ struct ActionsDetailView: View {
             }
         }
         .padding()
-        .frame(minWidth: 300.0, idealWidth: 400.0)
-    }
-
-    struct DurationAndType: View {
-        let action: Action
-        
-        var body: some View {
-            HStack {
-                switch action.duration {
-                case 0:
-                    Image(systemName: "0.circle")
-                        .foregroundStyle(.gray)
-                case 1:
-                    Image(systemName: "1.circle")
-                        .foregroundStyle(.gray)
-                case 2:
-                    Image(systemName: "2.circle")
-                        .foregroundStyle(.gray)
-                case 3:
-                    Image(systemName: "3.circle")
-                        .foregroundStyle(.gray)
-                default:
-                    Image(systemName: "questionmark.circle")
-                        .foregroundStyle(.gray)
-                }
-                
-                Text(action.type.rawValue.capitalized)
-                    .modifier(HeadingText(padded: false))
-            }
-        }
-    }
-
-    struct Traits: View {
-        let action: Action
-        
-        var body: some View {
-            HStack {
-                Text("traits:")
-                    .modifier(NormalText())
-                    .frame(minHeight: 20.0)
-                ForEach(action.traits.sorted(by: { $0.rawValue <= $1.rawValue }), id: \.rawValue) { trait in
-                    Text(trait.rawValue)
-                        .modifier(ColoredListText(color: tomato))
-                }
-            }
-        }
+        .frame(minWidth: 350.0, idealWidth: 400.0)
     }
 
     struct Trigger: View {

@@ -14,6 +14,7 @@ enum Ability: String, Codable {
     case charisma
     case dexterity
     case intelligence
+    case strength
     case wisdom
 }
 
@@ -103,25 +104,25 @@ struct Skills: Codable {
             fatalError("unable to read \(resourceName).json contents")
         }
         
-        do {
-            return try JSONDecoder().decode(Skills.self, from: data)
-        } catch DecodingError.dataCorrupted(let context) {
-            fatalError("unable to decode Skills data, data corrupted: context=\(context)")
-        } catch DecodingError.keyNotFound(let key, let context) {
-            fatalError("unable to decode Skills data, key not found: key=\(key), context=\(context)")
-        } catch DecodingError.typeMismatch(let type, let context) {
-            fatalError("unable to decode Skills data, type mismatch: type=\(type), context=\(context)")
-        } catch DecodingError.valueNotFound(let type, let context) {
-            fatalError("unable to decode Skills data, value not found: type=\(type), context=\(context)")
-        } catch {
-            fatalError("unable to decode Skills data: data fields are invalid")
-        }
-        
-//        guard let skills = try? JSONDecoder().decode(Skills.self, from: data) else {
-//            fatalError("unable to decode Conditions data!")
+//        do {
+//            return try JSONDecoder().decode(Skills.self, from: data)
+//        } catch DecodingError.dataCorrupted(let context) {
+//            fatalError("unable to decode Skills data, data corrupted: context=\(context)")
+//        } catch DecodingError.keyNotFound(let key, let context) {
+//            fatalError("unable to decode Skills data, key not found: key=\(key), context=\(context)")
+//        } catch DecodingError.typeMismatch(let type, let context) {
+//            fatalError("unable to decode Skills data, type mismatch: type=\(type), context=\(context)")
+//        } catch DecodingError.valueNotFound(let type, let context) {
+//            fatalError("unable to decode Skills data, value not found: type=\(type), context=\(context)")
+//        } catch {
+//            fatalError("unable to decode Skills data: data fields are invalid")
 //        }
-//
-//        return Skills(description: skills.description, skills: skills.skills.sorted(by: { $0.name <= $1.name }))
+
+        guard let skills = try? JSONDecoder().decode(Skills.self, from: data) else {
+            fatalError("unable to decode Conditions data!")
+        }
+
+        return Skills(description: skills.description, skills: skills.skills.sorted(by: { $0.name <= $1.name }))
     }
 }
 

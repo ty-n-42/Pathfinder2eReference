@@ -18,10 +18,10 @@ struct DetailView: View {
         case .conditions:
             Text("Detail of a Condition item")
         case .skills:
-            Text("Details of a skill item")
+            Text("Details of a Skill item")
         default:
             ScrollView {
-                Text("Select an item from the middle panel to reveal item details in this panel.")
+                Text("Select an item from the middle panel to reveal details in this panel.")
                     .padding(.top, 30.0)
                     .padding([.leading, .trailing, .bottom], 20.0)
             }

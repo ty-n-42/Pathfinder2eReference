@@ -16,10 +16,10 @@ struct ActionsView: View {
     var body: some View {
         ScrollViewReader { scroller in
             List(selection: $selectedAction) {
-                ForEach(actions?.actions.sorted(by: { $0.name <= $1.name }) ?? Array<Action>(), id: \.name) { action in
+                ForEach(actions?.actions ?? Array<Action>(), id: \.name) { action in
                     NavigationLink(destination: ActionsDetailView(action: action), tag: action.name, selection: $selectedAction) {
                         HStack {
-                            Label(action.name.capitalized, systemImage: "doc.text")
+                            Label(action.name.isEmpty ? "!! DATA ERROR !!" : action.name.capitalized, systemImage: "doc.text")
                             Spacer()
                             switch action.mode {
                             case .encounter:
@@ -35,18 +35,19 @@ struct ActionsView: View {
                         }
                     }
                     .id(action.name)
+                    .frame(height: 20.0)
                 }
             }
             .listStyle(SidebarListStyle())
-            .navigationTitle(selectedAction == nil ? Category.actions.rawValue.capitalized : "\(selectedAction!) action")
+            .navigationTitle(selectedAction == nil ? Category.actions.rawValue.capitalized : "\(selectedAction!.capitalized) action")
             .onAppear {
                 actions = Actions.load(jsonResource: "Actions")
                 selectedAction = lastSelectedAction.isEmpty ? ( actions?.actions.first?.name ?? nil ) : lastSelectedAction
-                scroller.scrollTo(selectedAction, anchor: .center)
+                scroller.scrollTo(selectedAction)
             }
             .onChange(of: selectedAction) { newValue in
                 lastSelectedAction = newValue ?? ""
-                scroller.scrollTo(newValue, anchor: .center)
+                scroller.scrollTo(newValue)
             }
         }
     }

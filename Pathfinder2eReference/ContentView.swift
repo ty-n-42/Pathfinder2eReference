@@ -11,33 +11,45 @@ enum Category: String, CaseIterable {
     case actions
     case conditions
     case skills
+    
+    static func allCasesSorted() -> [Category] {
+        Category.allCases.sorted(by: { $0.rawValue <= $1.rawValue })
+    }
 }
 
 /**
- root view showing first pane of 3 tier navigation: list of information categories: actions, conditions, skills, etc */
+ root view showing first pane of 3 tier navigation: list of information categories: actions, conditions, skills, etc
+ */
 struct ContentView: View {
     @State private var selectedCategory: String? = nil
     
+    @AppStorage("lastSelectedCategory") private var lastSelectedCategory: String = ""
+
     var body: some View {
-        NavigationView {
-            List(Category.allCases, id:\.self) { category in
-                NavigationLink(destination: SubContentView(category: category), tag: category.rawValue, selection: $selectedCategory) {
-                    Label(category.rawValue, systemImage: "doc.on.doc")
+        ScrollViewReader { scroller in
+            NavigationView {
+                List(Category.allCasesSorted(), id:\.self) { category in
+                    NavigationLink(destination: SubContentView(category: category), tag: category.rawValue, selection: $selectedCategory) {
+                        Label(category.rawValue, systemImage: "doc.on.doc")
+                    }
+                }
+                .listStyle(SidebarListStyle())
+                .frame(minHeight: 300.0, idealHeight: 500.0)
+
+                SubContentView(category: nil)
+                    .frame(minWidth:250.0, idealWidth: 300.0)
+
+                DetailView(category: nil, item: nil)
+                    .frame(minWidth: 350.0, idealWidth: 400.0)
+            }
+            .navigationTitle("Pathfinder 2e Reference")
+            .toolbar {
+                ToolbarItem(placement: .navigation) {
+                    Button(action: toggleSidebar) { Image(systemName: "sidebar.leading") }
                 }
             }
-            .listStyle(SidebarListStyle())
-            .frame(minWidth: 100.0, idealWidth: 200.0, minHeight: 300.0, idealHeight: 500.0)
-
-            SubContentView()
-                .frame(minWidth:200.0, idealWidth: 300.0)
-
-            DetailView(category: nil, item: nil)
-                .frame(minWidth: 300.0, idealWidth: 400.0)
-        }
-        .navigationTitle("Pathfinder 2e Reference")
-        .toolbar {
-            ToolbarItem(placement: .navigation) {
-                Button(action: toggleSidebar) { Image(systemName: "sidebar.leading") }
+            .onAppear {
+                selectedCategory = lastSelectedCategory.isEmpty ? ( Category.allCasesSorted().first?.rawValue ?? nil ) : lastSelectedCategory
             }
         }
     }

@@ -22,7 +22,7 @@ struct ConditionsDetailView: View {
             }
         }
         .padding()
-        .frame(minWidth: 300.0, idealWidth: 400.0)
+        .frame(minWidth: 350.0, idealWidth: 400.0)
     }
 }
 
