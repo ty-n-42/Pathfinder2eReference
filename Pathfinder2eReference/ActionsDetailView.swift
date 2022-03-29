@@ -34,10 +34,11 @@ struct Affects: View {
         HStack {
             Text("affects:")
                 .modifier(NormalText())
-                .frame(minHeight: 20.0)
-            ForEach(affects.sorted(by: { $0.rawValue <= $1.rawValue }), id: \.rawValue) { affect in
+                .lineLimit(1)
+//                .frame(minHeight: 20.0)
+            ForEach(Affect.allCasesSorted, id: \.rawValue) { affect in
                 Text(affect.rawValue)
-                    .modifier(ColoredListText(color: royalBlue))
+                    .modifier(ColoredListText(color: affects.contains(affect) ? royalBlue : darkslategray ))
                     .lineLimit(1)
             }
         }
@@ -95,10 +96,11 @@ struct Traits: View {
         HStack {
             Text("traits:")
                 .modifier(NormalText())
-                .frame(minHeight: 20.0)
-            ForEach(traits.sorted(by: { $0.rawValue <= $1.rawValue }), id: \.rawValue) { trait in
+                .lineLimit(1)
+//                .frame(minHeight: 20.0)
+            ForEach(Trait.allCasesSorted, id: \.rawValue) { trait in
                 Text(trait.rawValue)
-                    .modifier(ColoredListText(color: tomato))
+                    .modifier(ColoredListText(color: traits.contains(trait) ? tomato : darkslategray ))
                     .lineLimit(1)
             }
         }
@@ -117,7 +119,9 @@ struct ActionsDetailView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
 
             DurationAndType(duration: action.duration, type: action.type)
-                .padding(.top)
+//                .padding(.top)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            ModeView(mode: Mode.encounter)
                 .frame(maxWidth: .infinity, alignment: .leading)
             Traits(traits: action.traits)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -143,40 +147,6 @@ struct ActionsDetailView: View {
         .padding()
         .frame(minWidth: 350.0, idealWidth: 400.0)
     }
-
-    struct Trigger: View {
-        let action: Action
-        
-        var body: some View {
-            Text("Trigger")
-                .modifier(HeadingText(padded: true))
-            Text(action.trigger.isEmpty ? "None." : action.trigger)
-                .modifier(NormalText())
-        }
-    }
-
-    struct Requirement: View {
-        let action: Action
-        
-        var body: some View {
-            Text("Requirement")
-                .modifier(HeadingText(padded: true))
-            Text(action.requirement.isEmpty ? "None." : action.requirement)
-                .modifier(NormalText())
-        }
-    }
-
-    struct Description: View {
-        let action: Action
-        
-        var body: some View {
-            Text("Description")
-                .modifier(HeadingText(padded: true))
-            Text(action.description.isEmpty ? "None." : action.description)
-                .modifier(NormalText())
-        }
-    }
-
 }
 
 struct ActionsDetailView_Previews: PreviewProvider {

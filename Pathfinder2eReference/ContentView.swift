@@ -11,10 +11,6 @@ enum Category: String, CaseIterable {
     case actions
     case conditions
     case skills
-    
-    static func allCasesSorted() -> [Category] {
-        Category.allCases.sorted(by: { $0.rawValue <= $1.rawValue })
-    }
 }
 
 /**
@@ -28,7 +24,7 @@ struct ContentView: View {
     var body: some View {
         ScrollViewReader { scroller in
             NavigationView {
-                List(Category.allCasesSorted(), id:\.self) { category in
+                List(Category.allCasesSorted, id:\.self) { category in
                     NavigationLink(destination: SubContentView(category: category), tag: category.rawValue, selection: $selectedCategory) {
                         Label(category.rawValue, systemImage: "doc.on.doc")
                     }
@@ -49,7 +45,7 @@ struct ContentView: View {
                 }
             }
             .onAppear {
-                selectedCategory = lastSelectedCategory.isEmpty ? ( Category.allCasesSorted().first?.rawValue ?? nil ) : lastSelectedCategory
+                selectedCategory = lastSelectedCategory.isEmpty ? ( Category.allCasesSorted.first?.rawValue ?? nil ) : lastSelectedCategory
             }
         }
     }

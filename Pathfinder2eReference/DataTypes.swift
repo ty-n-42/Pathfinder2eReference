@@ -7,10 +7,23 @@
 
 import Foundation
 
+// website tool for creating and validating json data: https://codebeautify.org/jsonviewer
+
+/**
+ add sorted case interations
+ */
+extension CaseIterable where Self: RawRepresentable, Self.RawValue: Comparable {
+    static var allCasesSorted: [Self]  {
+        get {
+            self.allCases.sorted(by: { $0.rawValue <= $1.rawValue })
+        }
+    }
+}
+
 /**
  categorisation of character competency
  */
-enum Ability: String, Codable {
+enum Ability: String, Codable, CaseIterable {
     case charisma
     case dexterity
     case intelligence
@@ -21,7 +34,7 @@ enum Ability: String, Codable {
 /**
  amount of learning needed to use a rule
  */
-enum Competence: String, Codable {
+enum Competence: String, Codable, CaseIterable {
     case untrained
     case trained
 }
@@ -29,14 +42,14 @@ enum Competence: String, Codable {
 /**
  categorisation for similar rules
  */
-enum SkillGroup: String, Codable {
+enum SkillGroup: String, Codable, CaseIterable {
     case acrobatics, arcana, athletics, crafting, deception, diplomacy, intimidation, lore, medicine, nature, occultism, performance, religion, society, stealth, survival, thievery
 }
 
 /**
  identifier for the type of activity a rule occurs in
  */
-enum Behaviour: String, Codable {
+enum Behaviour: String, Codable, CaseIterable {
     case action
     case activity
     case reaction
@@ -46,7 +59,7 @@ enum Behaviour: String, Codable {
 /**
  what a game rule affects
  */
-enum Affect:String, Codable {
+enum Affect:String, Codable, CaseIterable {
     case player
     case others
     case item
@@ -56,7 +69,7 @@ enum Affect:String, Codable {
 /**
  the game mode a rule runs in
  */
-enum Mode: String, Codable {
+enum Mode: String, Codable, CaseIterable {
     case encounter
     case exploration
     case downtime
@@ -65,7 +78,7 @@ enum Mode: String, Codable {
 /**
  characteristic of a rule
  */
-enum Trait: String, Codable {
+enum Trait: String, Codable, CaseIterable {
     case attack, auditory, concentrate, emotion, healing, linguistic, manipulate, mental, move, secret, visual
 }
 

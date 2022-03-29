@@ -18,6 +18,8 @@ let tomato: Color = Color(red: 1.0, green: 99.0 / 255.0, blue: 71.0 / 255.0, opa
 let royalBlue: Color = Color(red: 65.0 / 255.0, green: 105.0 / 255.0, blue: 225.0 / 255.0, opacity: 1.0)
 //let limegreen: Color = Color(red: 50.0 / 255.0, green: 205.0 / 255.0, blue: 50.0 / 255.0, opacity: 1.0)
 let mediumseagreen: Color = Color(red: 60.0 / 255.0, green: 179.0 / 255.0, blue: 113.0 / 255.0, opacity: 1.0)
+//let dimgray: Color = Color(red: 105.0 / 255.0, green: 105.0 / 255.0, blue: 105.0 / 255.0, opacity: 1.0)
+let darkslategray: Color = Color(red: 47.0 / 255.0, green: 79.0 / 255.0, blue: 79.0 / 255.0, opacity: 1.0)
 
 /**
  text for a 1st level sub-heading, optionally padded at the top
